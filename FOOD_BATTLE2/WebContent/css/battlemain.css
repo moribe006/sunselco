@@ -1,0 +1,427 @@
+@charset "UTF-8";
+@media screen and (min-width : 768px){
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+	html{
+        width:auto;
+        height: auto;
+    }
+
+
+body{
+	font-family:dqfont;
+	background-color:black;
+	color:white;
+}
+
+
+/* ------------------------------------------------ */
+
+.picture{
+	text-align: right;
+    width: 1300px;
+    height: 250px;
+	margin-bottom:30px;
+	margin-left: auto;
+	margin-right: 100px;
+
+
+}
+
+#e_img{
+    width: 200px;
+    height: 150px;
+}
+
+#y_img{
+    width: 200px;
+    height: 150px;
+}
+
+
+
+/* ------------------------------------------------ */
+.e{
+	color:white;
+    text-align:left;
+	width:300px;
+	height:50px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	margin-left: 750px;
+	margin-right: auto;
+	float: left;
+
+}
+.enamesel{
+	width: 70px;
+}
+
+.ehpsel{
+	width: 70px;
+}
+
+/* ------------------------------------------------ */
+
+.h{
+	color:white;
+    text-align:left;
+	width:300px;
+	height:50px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	float: left;
+}
+
+.hnamesel{
+	width: 50px;
+}
+
+.hhpsel{
+	width: 70px;
+}
+
+.hmpsel{
+	width: 70px
+}
+.hHpid{
+	width: 70px;
+}
+/* ------------------------------------------------ */
+.y{
+}
+
+/* ------------------------------------------------ */
+
+.outline{
+	margin:40px 0px 0px 0px;
+	width: auto;
+    height: 250px;
+      display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+/* ------------------------------------------------ */
+.comand{
+	width:300px;
+	height: 200px;
+	margin:20px 0px 20px 20px;
+	border: 3px solid white ;
+	border-radius:10px;
+	float:left;
+	text-align: center;
+
+
+}
+
+.comand ul{
+	margin:25px 0px 0px 0px;
+	padding: 0px;
+}
+
+.comand li{
+	margin:10px 0px 10px 0px;
+	list-style: none;
+}
+.comand input{
+	color:white;
+	font-size:25px;
+	width:120px;
+	height: 30px;
+	border:none;
+	background-color:black;
+	cursor: pointer;
+	outline:0;
+	font-family:dqfont;
+}
+.comand input:hover{
+ color:orange;
+}
+/* ------------------------------------------------ */
+.text{
+	margin:20px 0px 20px 20px;
+	float:left;
+	width:900px;
+	height: 200px;
+	border: 3px solid white ;
+	border-radius:10px;
+	color:white;
+}
+/* ------------------------------------------------ */
+iframe{
+	border: none;
+}
+#comment{
+	margin:20px 20px;
+}
+
+input{
+	color:white;
+	font-size:17px;
+	width:100px;
+	height: 30px;
+	border:none;
+	background-color:black;
+	cursor: pointer;
+	outline:0;
+	font-family:dqfont;
+	padding: 0px;
+}
+input:hover{
+ 	color:orange;
+}
+table{
+	margin: 20px 0px 0px 0px;
+}
+.text table tr th{
+	width: 120px;
+	height: 30px;
+	padding:0px;
+	}
+
+.text button{
+	font-family:dqfont;
+	  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+}
+/* ------------------------------------------------ */
+/*
+button {
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      文字位置
+  cursor        : pointer;     カーソル
+  padding       : 5px 10px;   余白
+  background    : rgba(0, 0, 0, 0.10);     背景色
+  color         : #ffffff;     文字色
+  line-height   : 0.3em;         1行の高さ
+  opacity       : 0.9;         透明度
+  transition    : .3s;         なめらか変化
+} */
+/* ------------------------------------------------ */
+
+
+
+/*--------------------------------------------------------------*/
+@media screen and (max-width :768px){
+
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+	html{
+        width:auto;
+        height: 100%;
+    }
+
+	body{
+	font-family:dqfont;
+	background-color:black;
+	color:white;
+	height: 700px;
+}
+
+
+/* ------------------------------------------------ */
+
+.picture{
+	text-align: right;
+    width: 360px;
+    height: 100px;
+	margin-bottom:120px;
+	margin-top: 20px;
+
+}
+
+img{
+    width: 130px;
+    height: 120px;
+}
+
+/* ------------------------------------------------ */
+.e{
+	color:white;
+    text-align:left;
+	width:200px;
+	height:50px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	float: left;
+	padding: 10px ;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+.enamesel{
+	width: 70px;
+}
+
+.ehpsel{
+	width: 70px;
+}
+
+/* ------------------------------------------------ */
+
+.h{
+	color:white;
+    text-align:left;
+	width:210px;
+	height:50px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	float: right;
+	margin-right: 5px;
+	margin-top: 40px;
+}
+
+.hnamesel{
+	width: 50px;
+}
+
+.hhpsel{
+	width: 70px;
+}
+
+.hmpsel{
+	width: 70px
+}
+.hHpid{
+	width: 70px;
+}
+/* ------------------------------------------------ */
+.y{
+}
+
+/* ------------------------------------------------ */
+
+.outline{
+	margin:auto;
+	width: 360px;
+    height: 350px;
+
+}
+
+/* ------------------------------------------------ */
+.comand{
+	width:350px;
+	height: 90px;
+	margin: 5px 5px 5px 5px;
+	border: 3px solid white ;
+	border-radius:10px;
+	text-align: center;
+
+}
+
+.comand ul{
+	margin:5px 20px 5px 40px;
+	padding: 0px;
+	list-style: none outside;
+}
+
+.comand li{
+	margin:5px 15px 0px 5px;
+	list-style: none;
+	float: left;
+
+}
+.comand input{
+	color:white;
+	font-size:25px;
+	width:120px;
+	height: 30px;
+	border:none;
+	background-color:black;
+	cursor: pointer;
+	outline:0;
+	font-family:dqfont;
+}
+.comand input:hover{
+ color:orange;
+}
+/* ------------------------------------------------ */
+.text{
+
+	width:350px;
+	height: 220px;
+	border: 3px solid white ;
+	border-radius:10px;
+	color:white;
+	margin: 10px 5px 10px 5px;
+
+}
+/* ------------------------------------------------ */
+iframe{
+	border: none;
+}
+#comment{
+	margin:5px 20px 10px 10px;
+}
+
+input{
+	color:white;
+	font-size:17px;
+	width:100px;
+	height: 30px;
+	border:none;
+	background-color:black;
+	cursor: pointer;
+	outline:0;
+	font-family:dqfont;
+	padding: 0px;
+}
+input:hover{
+ 	color:orange;
+}
+table{
+	margin: 15px 0px 0px 0px;
+}
+.text table tr th{
+	width: 120px;
+	height: 30px;
+	padding:0px;
+	}
+
+.text button{
+	font-family:dqfont;
+	  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+}
+

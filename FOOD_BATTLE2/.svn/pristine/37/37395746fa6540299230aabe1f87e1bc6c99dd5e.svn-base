@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>豚マニ</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+
+
+<h1>店名：稲田屋Sun</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/inadaya.png" alt="39">
+</div>
+<div class="comment">
+<form action="/FOOD_BATTLE/Ready" method="get" >
+メニュー：豚マニア丼、すたみな丼<br>
+コメント：<br>
+壱　まず食べる<br>
+弐　卵を混ぜて食べる<br>
+参　ブラックペッパーで食べる<br>
+四　自家製辛味噌で食べる<br>
+五　締めに出し汁とわさびで食する<br>
+肉のグラビア、ご堪能あれ！！！<br>
+
+<button type=submit name="name" value="豚マニ丼" >注文する</button>
+</form>
+</div>
+</body>
+</html>

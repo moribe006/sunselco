@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+	html{
+        width:auto;
+        height: auto;
+    }
+
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+	font-family:dqfont;
+}
+body{
+	background-color: black;
+	text: #ffff;
+}
+/* --------------------------------------------- */
+h1{
+	color:white;
+    text-align: center;
+}
+
+/* --------------------------------------------- */
+
+
+
+.picture{
+
+	width:auto;
+	text-align: center;
+	margin-bottom:30px;
+}
+
+
+
+img{
+	position: center;
+}
+
+
+/* --------------------------------------------- */
+
+.comment{
+
+    margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:800px;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	padding: 10px;
+
+}
+
+button{
+	font-family:dqfont;
+	float:right;
+
+
+}
+}
+
+
+/* --------------------------------------------- スマホ*/
+@media screen and (max-width: 768px) {
+	html{
+        width:auto;
+        height: 100%;
+    }
+
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+	font-family:dqfont;
+}
+body{
+	background-color: black;
+	text: #ffff;
+	margin: 0 auto;
+}
+/* --------------------------------------------- */
+h1{
+	color:white;
+    text-align: center;
+    margin-top: 15%;
+}
+
+/* --------------------------------------------- */
+
+
+
+.picture{
+
+	width:auto;
+	text-align: center;
+	margin-bottom:30px;
+}
+
+
+
+img{
+	position: center;
+	max-width: 100%;
+}
+
+
+/* --------------------------------------------- */
+
+.comment{
+
+    margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:80%;
+	height : 250px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	padding: 10px;
+	margin-top: 25%;
+
+}
+
+.comment button{
+	font-family:dqfont;
+	width		 	: auto;
+  	display       : inline-block;
+  	border-radius : 9%;
+  	font-size     : 10pt;
+  	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	margin-left:60%;
+	margin-bottom: 10px;
+	right: 0;
+	bottom: 0;
+
+}
+}
+
+
+
+
+
+
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>SUNQカレー</title>
+<link rel = "stylesheet" type = "text/css" href = "/FOOD_BATTLE/css/charry.css"/>
+</head>
+<body>
+
+<h1>店名：SUNQカレー</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/Curry.png" alt="39">
+</div>
+
+
+<div class="comment">
+<form action="/FOOD_BATTLE/Ready" method="get" >
+メニュー：カレー<br>
+コメント：<br>
+３９？　サンキュー？　Thank you？　SUNQ！！　なるほどな・・・<br>
+本格カレーがチキンとビーフの2種類しかも、３・・９・・０・・・390円だと！！<br>
+もうそれは実質タダじゃないか！<br>
+トッピングもあるのか、よし！ハンバーグを乗せよう。<br>
+ブーン・・・・・・チン！<br>
+う、嘘だろ、レンチンなのか・・・・<br>
+
+<button type=submit name="name" value="39カレー" >いざ、勝負！！</button>
+
+</form>
+</div>
+
+
+</body>
+</html>

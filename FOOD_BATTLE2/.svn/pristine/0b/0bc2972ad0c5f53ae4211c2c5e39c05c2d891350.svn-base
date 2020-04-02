@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 768px) {
+
+	html{
+        width:auto;
+        height: auto;
+
+    }
+
+body{
+	background-color:black;
+    color:white;
+}
+
+.gameover{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+}
+
+a{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+	font-size:36px;
+	color:white;
+	text-decoration:none;
+}
+
+img{
+	    width:100%;
+        height: auto;
+}
+
+}
+
+/* -------------------------------------------スマホ */
+
+@media screen and (min-width: 479px) {
+
+	html{
+        width:auto;
+        height: 100%;
+
+    }
+
+body{
+	background-color:black;
+    color:white;
+
+}
+
+.gameover{
+
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+	text-decoration:center;
+}
+
+a{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin: auto;
+	font-size:15px;
+	color:white;
+	text-decoration:none;
+}
+
+img{
+	    width:100%;
+        height: 100%;
+}
+
+
+}

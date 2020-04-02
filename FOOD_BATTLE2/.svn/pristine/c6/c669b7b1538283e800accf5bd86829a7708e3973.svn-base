@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>ビック鯛はのぼる</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+
+<h1>店名：ビッグ鯛はのぼる</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/tai.png" alt="39">
+</div>
+
+<div class = "comment">
+<form action="/FOOD_BATTLE/Ready" method="get" >
+メニュー：色々<br>
+コメント：<br>
+おいしい？きれいな？定食屋さん<br>
+外に豚の生肉が展示してある<br>
+おかずはかなりのボリュームようだ・・・<br>
+しかもごはんを２杯おかわり出来て、みそ汁も３杯おかわりできるのか？<br>
+その上に食後は１杯のコーヒー付きだとっっ！？サービス精神が旺盛すぎる！！<br>
+<br>
+よし、生姜焼き定食を頼もう！<br>
+（店主は展示してある生肉を手に調理し始めた。）<br>
+えっっっ？
+
+<button type=submit name="name" value="生姜焼き定食" >いざ！生姜焼き定食！</button>
+</form>
+</div>
+</body>
+</html>

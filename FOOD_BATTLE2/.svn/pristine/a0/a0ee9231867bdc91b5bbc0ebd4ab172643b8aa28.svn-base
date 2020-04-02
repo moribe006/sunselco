@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+	font-family:dqfont;
+}
+body{
+	background-color: black;
+	color: white;
+}
+
+.border1{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:100%;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+
+	}
+.border2{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:45%;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	}
+.button1 {
+  font-family:dqfont;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+
+.button2 {
+  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+
+}
+.button3 {
+  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+.buttonwait {
+  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 170, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+
+.buttonend {
+  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(170, 0, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+
+
+
+
+.border3{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:100%;
+	height:100px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	}
+.border4{
+	border:1;
+	text-alihn:left;
+	width:120px;
+	height:100px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	}
+.img{
+	text-alihn:left;
+	float:left;;
+	width:120px;
+	height:100px;
+	}
+}

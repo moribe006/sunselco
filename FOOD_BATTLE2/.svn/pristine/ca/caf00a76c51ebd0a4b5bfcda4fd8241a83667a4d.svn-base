@@ -1,0 +1,203 @@
+
+function itemList(){
+	//kname=傷薬 iname=胃薬 qname=謎の液体
+	//アイテムの名前をjspから取得して定義
+	var kname = document.getElementById("kname").textContent;
+	var iname = document.getElementById("iname").textContent;
+	var qname = document.getElementById("qname").textContent;
+
+	//アイテムのhp回復量をjspから取得して定義
+	var khp = document.getElementById("khp").textContent;
+	var ihp = document.getElementById("ihp").textContent;
+	var qhp = document.getElementById("qhp").textContent;
+
+	//アイテムのmp回復力をjspから取得して定義
+	var kmp = document.getElementById("kmp").textContent;
+	var imp = document.getElementById("imp").textContent;
+	var qmp = document.getElementById("qmp").textContent;
+
+	//アイテムの個数をjspから取得して定義
+	var knumber = document.getElementById("knumber").textContent;
+	var inumber = document.getElementById("inumber").textContent;
+	var qnumber = document.getElementById("qnumber").textContent;
+
+
+/*------------------------------------------ここからアイテム個数を判定----------------------------------------------*/
+
+	//アイテムボタンを押したらcommentのdivにアイテムリストを表示
+	if(Number(knumber)=== 0 && Number(inumber) === 0 && Number(qnumber) === 0){
+		document.getElementById('comment').innerHTML ='何も持っていない';
+
+	}else if(Number(knumber) > 0 && Number(inumber) > 0 && Number(qnumber) > 0){
+		document.getElementById('comment').innerHTML =
+		`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+		<tr><th><input id="item" type="button" value=${kname} onclick="return kizuuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>
+		<tr><th><input id="item" type="button" value=${iname} onclick="return iguuse()"></th><th>${ihp}</th><th>${imp}<th>${inumber}</th></tr>
+		<tr><th><input id="item" type="button" value=${qname} onclick="return pepeuse()"></th><th>${qhp}</th><th>${qmp}<th>${qnumber}</th></tr>
+		</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) > 0 && Number(inumber) === 0 && Number(qnumber) === 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${kname} onclick="return kizuuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>
+			</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) > 0 && Number(inumber) > 0 && Number(qnumber) === 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${kname} onclick="return kizuuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>
+			<tr><th><input id="item" type="button" value=${iname} onclick="return iguuse()"></th><th>${ihp}</th><th>${imp}<th>${inumber}</th></tr>
+			</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) > 0 && Number(inumber) === 0 && Number(qnumber) > 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${kname} onclick="return kizuuse()"></th><th>${khp}</th><th>${kmp}<th>${knumber}</th></tr>
+			<tr><th><input id="item" type="button" value=${qname} onclick="return pepeuse()"></th><th>${qhp}</th><th>${qmp}<th>${qnumber}</th></tr>
+			</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) === 0 && Number(inumber) === 0 && Number(qnumber) > 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${qname} onclick="return pepeuse()"></th><th>${qhp}</th><th>${qmp}<th>${qnumber}</th></tr>
+			</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) === 0 && Number(inumber) > 0 && Number(qnumber) === 0){
+			document.getElementById('comment').innerHTML =
+				`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+				<tr><th><input id="item" type="button" value=${iname} onclick="return iguuse()"></th><th>${ihp}</th><th>${imp}<th>${inumber}</th></tr>
+				</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+
+	}else if(Number(knumber) === 0 && Number(inumber) > 0 && Number(qnumber) > 0){
+		document.getElementById('comment').innerHTML =
+			`<table><tr><th>名前</th><th>ＨＰ回復量</th><th>ＭＰ回復量</th><th>個数</th></tr>
+			<tr><th><input id="item" type="button" value=${iname} onclick="return iguuse()"></th><th>${ihp}</th><th>${imp}<th>${inumber}</th></tr>
+			<tr><th><input id="item" type="button" value=${qname} onclick="return pepeuse()"></th><th>${qhp}</th><th>${qmp}<th>${qnumber}</th></tr>
+			</table><br>　　　　　　　※使用するアイテムを選んで下さい`;
+	}
+}
+
+/*------------------------------------------ここまでアイテム個数を判定----------------------------------------------*/
+
+
+
+//傷薬を使用したときの処理を実行するメソッド
+function kizuuse(){
+
+	//傷薬の値を取得
+	var kname = document.getElementById("kname").textContent;
+	var khp = document.getElementById("khp").textContent;
+	var kmp = document.getElementById("kmp").textContent;
+	var knumber = document.getElementById("knumber").textContent;
+
+	//勇者の名前、hp,mpをjspから取得して定義
+	var hname = document.getElementById("hName").textContent;
+	var hhp = document.getElementById("hHpid").textContent;
+	var hmp = document.getElementById("hMpid").textContent;
+
+
+	//アイテムを使用したときの表示と処理
+	if(Number(hhp) === 100){
+		document.getElementById('comment').innerHTML = 'これ以上ＨＰは回復しないため、使えない！'
+	}else if(Number(hhp) < 100){
+
+		//勇者のHPが100以上にしない為の計算に使用する
+		var hpjuge = 100 - Number(hhp);
+
+		//勇者の回復可能量がアイテム回復量より大きい場合はアイテムの数値を取得
+		if(hpjuge >= Number(khp)){
+			document.getElementById('comment').innerHTML = `${hname}は${kname}を使った！！ＨＰが${khp}、ＭＰが${kmp}回復した！！`;
+			//勇者のHP,MPを書き換え
+			var hhpAfter = (Number(hhp) + Number(khp));
+			document.getElementById('hHpid').innerHTML = hhpAfter;
+
+		//勇者の回復可能量がアイテム回復量より少ない場合は計算の数値を取得
+		}else if(hpjuge <= Number(khp)){
+			document.getElementById('comment').innerHTML = `${hname}は${kname}を使った！！ＨＰが${hpjuge}、ＭＰが${kmp}回復した！！`;
+			//勇者のHP,MPを書き換え
+			var hhpAfter = (Number(hhp) + Number(hpjuge));
+			document.getElementById('hHpid').innerHTML = hhpAfter;
+		}
+
+		//使用したアイテムを減らす処理
+		var usenumber = (Number(knumber) - 1);
+		document.getElementById('knumber').innerHTML = usenumber;
+	}
+}
+
+//胃薬を使用したときの処理を実行するメソッド
+function iguuse(){
+	//傷薬の値を取得
+	var iname = document.getElementById("iname").textContent;
+	var ihp = document.getElementById("ihp").textContent;
+	var imp = document.getElementById("imp").textContent;
+	var inumber = document.getElementById("inumber").textContent;
+
+	//勇者の名前、hp,mpをjspから取得して定義
+	var hname = document.getElementById("hName").textContent;
+	var hhp = document.getElementById("hHpid").textContent;
+	var hmp = document.getElementById("hMpid").textContent;
+
+	//アイテムを使用したときの表示と処理
+	if(Number(hmp) === 0){
+		document.getElementById('comment').innerHTML = 'これ以上ＭＰは回復しないため、使えない！'
+	}else if(Number(hmp) > 0){
+
+		//勇者のMPが0以下にしない為の計算に使用する
+		var mpjuge = Number(hmp);
+
+		//勇者の回復可能量がアイテム回復量より大きい場合はアイテムの数値を取得
+		if(mpjuge >= Number(imp)){
+			document.getElementById('comment').innerHTML = `${hname}は${iname}を使った！！ＨＰが${ihp}、ＭＰが${imp}回復した！！`;
+			//勇者のHP,MPを書き換え
+			var hmpAfter = (Number(hmp) - Number(imp));
+			document.getElementById('hMpid').innerHTML = hmpAfter;
+
+			//勇者の回復可能量がアイテム回復量より少ない場合は計算の数値を取得
+		}else if(mpjuge <= Number(imp)){
+			document.getElementById('comment').innerHTML = `${hname}は${iname}を使った！！ＨＰが${ihp}、ＭＰが${mpjuge}回復した！！`;
+			//勇者のHP,MPを書き換え
+			var hmpAfter = (Number(hmp) - Number(mpjuge));
+			document.getElementById('hMpid').innerHTML = hmpAfter;
+		}
+
+		//使用したアイテムを減らす処理
+		var usenumber = (Number(inumber) - 1);
+		document.getElementById('inumber').innerHTML = usenumber;
+	}
+}
+
+
+//ペペを使用したときの処理を実行するメソッド
+function pepeuse(){
+	//傷薬の値を取得
+	var qname = document.getElementById("iname").textContent;
+	var qhp = document.getElementById("ihp").textContent;
+	var qmp = document.getElementById("imp").textContent;
+	var qnumber = document.getElementById("inumber").textContent;
+
+
+	//勇者の名前、hp,mpをjspから取得して定義
+	var hname = document.getElementById("hName").textContent;
+	var hhp = document.getElementById("hHpid").textContent;
+	var hmp = document.getElementById("hMpid").textContent;
+
+
+	//アイテムを使用したときの表示と処理
+	if(Number(hhp) ===100 && Number(hmp) === 0){
+		document.getElementById('comment').innerHTML = 'これ以上ＨＰ、ＭＰは回復しないため、使えない！'
+
+	}else if(Number(hhp) < 100 || Number(hmp) > 0){
+		document.getElementById('comment').innerHTML = `${hname}は${qname}を使った！！ＨＰとＭＰがＭＡＸまで回復した`;
+		//勇者のHPとMPを100に書き換え
+		document.getElementById('hHpid').innerHTML = 100;
+		document.getElementById('hMpid').innerHTML = 0;
+
+		//使用したアイテムを減らす処理
+	var usenumber = (Number(qnumber) - 1);
+	document.getElementById('qnumber').innerHTML = usenumber;
+	}
+}
+
+
+

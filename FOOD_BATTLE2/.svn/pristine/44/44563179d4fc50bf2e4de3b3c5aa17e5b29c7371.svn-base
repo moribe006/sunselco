@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>対話</title>
+<link rel = "stylesheet" type = "text/css" href = "css/tolk.css"/>
+</head>
+<body>
+
+
+<div class = "tolk">
+<img src = "img/yuka.gif" width = "600" height = "500" alt = "tolk">
+</div>
+<div class = "king">
+<img src = "img/teacher.png" width = "100" height = "100" alt = "king">
+</div>
+
+<div class = "hero">
+<img src = "img/hero.png" width = "100" height = "100" alt = "hero">
+</div>
+
+
+<div class = "night1">
+<img src = "img/night.png" width = "100" height = "100" alt = "hero">
+</div>
+
+
+<div class = "night2">
+<img src = "img/night.png" width = "100" height = "100" alt = "hero">
+</div>
+
+
+
+
+
+
+
+
+<div class = "explain">
+
+<p>勇者よ、サンセルコを救ってくれ！！<br>
+   サンセルコの飲食店が激戦区となっておる・・・<br>
+   それによりお店独自の料理が変な方向に発展している！<br>
+   お前の力で正しく導いてくれ！！<br>
+   早く行け！・・・・・・早く！・・・・いい加減行ってくれ！</p><br>
+
+
+
+<form action = "/FOOD_BATTLE/StartAllList"  method = "get">
+<input type = "submit" value= "NEXT"><br>
+</form>
+
+</div>
+
+</body>
+</html>

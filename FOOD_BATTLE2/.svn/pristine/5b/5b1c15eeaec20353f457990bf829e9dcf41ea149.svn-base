@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>シカ食堂</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+<h1>店名：シカ食堂</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/sikasyokudou.png" alt="39">
+</div>
+<div class="comment">
+お弁当も販売しております？<br>
+30分食べ放題らしいですよ！(バイキング形式？)<br>
+11時オープン<br>
+12時に来店しても、バイキング分が準備されてない・・ですと・・・<br>
+食べることを許されない・・・<br>
+そして、テーブルと椅子の高さが一緒だと！？<br>
+おっと、店主が来たようだ。<br>
+<form action="/FOOD_BATTLE/Ready" method="get" >
+<button type=submit name="name" value="鹿店主" >いざ！勝負！</button>
+</form>
+
+</div>
+</body>
+</html>

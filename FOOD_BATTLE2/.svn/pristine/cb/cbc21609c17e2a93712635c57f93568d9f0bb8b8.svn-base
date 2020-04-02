@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>寵兆</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/textkiso.css">
+</head>
+<body>
+
+<h1>店名：寵兆(ちょうちょう)</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/tyoutyou.png" alt="39">
+</div>
+
+<div class="comment">
+昼の営業時間は11：30～です。<br>
+定休日は日・祝<br>
+老夫婦でやられているお店<br>
+💛ランチは海鮮丼💛<br>
+アジや鯛などその日の魚（刺身）をゴマダレで和え、ご飯にのせています。<br>
+<br>
+<form action="/FOOD_BATTLE/Ready" method="get" >
+<button type=submit name="name" value="海鮮丼" >いらっしゃい(店主)</button>
+</form>
+</div>
+</body>
+</html>

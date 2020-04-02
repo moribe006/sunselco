@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+	html{
+        width:auto;
+        height: auto;
+    }
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+	width:auto;
+	height:auto;
+	font-family:dqfont;
+}
+
+body{
+	background-color:black;
+	color:white;
+
+}
+
+/* ----------------------------------------------- */
+
+.tolk{
+	text-align:center;
+	display:block;
+	max-width:50%;
+	margin:0 auto;
+	 position: relative;
+}
+
+.king{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 47%;
+}
+
+.hero{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 47%;
+
+}
+
+.night1{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 33.5%;
+
+}
+
+.night2{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 60%;
+
+}
+
+
+
+/* ----------------------------------------------- */
+
+.explain{
+
+	margin-left:auto;
+	margin-right:auto;
+    bottom:0;
+	padding-left: 20px;
+    position: relative;
+	width:1060px;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+
+}
+
+.explain p{
+
+}
+
+/* ----------------------------------------------- */
+input{
+	font-family:dqfont;
+	width		 	: 120px;
+  	display       : inline-block;
+  	border-radius : 9%;
+  	font-size     : 10pt;
+  	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	position: absolute;
+	right: 8%;
+	top: 80%;
+
+}
+/* ----------------------------------------------- */
+}
+
+/* ----------------------------------------------------スマホ */
+
+
+@media screen and (max-width: 768px) {
+	html{
+        width:auto;
+        height: 100%;
+    }
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+
+	font-family:dqfont;
+}
+
+body{
+	background-color:black;
+	color:white;
+
+}
+
+/* ----------------------------------------------- */
+
+.tolk img{
+	align-items: center;
+	display:block;
+	max-width: 100%;
+	max-height: 50%;
+    position: relative;
+}
+
+.king img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.hero img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+}
+
+.night1 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+
+}
+
+.night2 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 60%;
+
+}
+
+
+
+/* ----------------------------------------------- */
+
+.explain{
+
+    bottom:0;
+    position: relative;
+	width:90%;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	margin: auto;
+	margin-top: 5%;
+
+}
+
+.explain p{
+	float: left;
+
+}
+
+/* ----------------------------------------------- */
+input{
+	font-family:dqfont;
+	width		 	: 120px;
+  	display       : inline-block;
+  	border-radius : 9%;
+  	font-size     : 10pt;
+  	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	position: absolute;
+	right: 8%;
+	top: 80%;
+}
+/* ----------------------------------------------- */
+}
+

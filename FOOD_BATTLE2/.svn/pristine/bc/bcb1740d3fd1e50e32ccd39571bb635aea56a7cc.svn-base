@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><!-- 担当白川 -->
+<meta charset="UTF-8">
+<title>とんしゃん</title>
+<link rel="stylesheet" type="text/css" href="/FOOD_BATTLE/css/tonsyan.css"/>
+</head>
+<body class=body text="white" style="margin: 0 auto">
+<h1>店名：とんしゃん</h1>
+<table class=table style="margin: 0 auto">
+<tr><td><img src="/FOOD_BATTLE/img/tonsyan.jpg"alt="とんしゃん画像" class=img></td>
+<td><img src="/FOOD_BATTLE/img/naiyou.jpg"alt="とんしゃん画像"class=img></td></tr>
+</table>
+
+<h3>地下一階　お弁当屋</h3>
+<h5>いつも１２時を過ぎると行列ができているお弁当屋さん<br>
+お弁当を食べれるスペースもあります。<br>
+お味噌汁も５０円で販売中<br>
+その場で食べれるスペースもあり<br>
+昼頃はここで食べているサラリーマンも多い<br>
+</h5>
+
+<h3>個人的おススメＭＥＮＵ：お持ち帰りお弁当</h3>
+<table style="margin: 0 auto">
+<tr><td>
+<img src="/FOOD_BATTLE/img/tonkatubentou.jpg" alt="とんかつ弁当"class=img>
+</td>
+<td>
+<img src="/FOOD_BATTLE/img/karaage.JPG" alt="からあげ弁当" class=img>
+</td>
+</tr>
+<tr>
+<td><h5>価格は500円：非常に量があります。<br>
+		400円のサイズが普通バージョンもおススメ</h5>
+</td>
+<td><h5>唐揚げの量も多く、肉の部位ももも肉で<br>
+		非常にコスパの良い品となっております。</h5>
+</td></tr>
+</table>
+<!-- <img src="" alt="">
+ -->
+<form action="/FOOD_BATTLE/Ready" method="get">
+<button type=submit name="name" value="おばちゃん" style="width: 634px; height: 116px; margin:0 auto;">いらっしゃいませ！（おばちゃん）</button>
+</form>
+</body>
+</html>

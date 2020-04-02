@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>エンドロール</title>
+<link rel = "stylesheet" type = "text/css" href = "css/endroll.css"/>
+</head>
+<body>
+<!-- <source src="sound.mp3" type="audio/mp3"> -->
+
+
+<div id="movie">
+   <div class="roll-text">
+
+<h1>おめでとう！！！</h1>
+
+
+サンセルコは無事平和に戻った。<br>
+<br>
+<br>
+<br>
+勇者が次々食い荒らすことによって<br>
+サンセルコは廃れてしまった。<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+だがこれが王様の狙いだったとは。<br>
+<br>
+<br>
+<br>
+<br>
+まさか王様が黒幕？。。。。。<br>
+<br>
+<br>
+<br>
+<br>
+・・・・・・・5年後・・・・・・・<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+勇者は後遺症として時々、<br>
+腹痛に襲われるようになったが<br>
+<br>
+<br>
+何事もなかったかのように日常を送っている。<br>
+<br>
+<br>
+<br>
+<br>
+今でも勇者は時々、激闘を思い出し<br>
+サンセルコに足を運んでいるようだ。<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ゴゴゴゴゴゴゴ－－、ドン、、、ガシャン。<br>
+<br>
+<br>
+<br>
+<br>
+た、大変だ！！<br>
+<br>
+今度はお好みのレンガが荒れている！！！<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+だ、誰か！！<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+（次の勇者は君かもしれない）<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>END</h2><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<strong>制作</strong><br>
+オロナミンCチーム<br>
+<br>
+「FOOD　BATTLE」<br>
+<br>
+<br>
+<strong>出演店舗</strong><br>
+<br>
+ビック鯛はのぼる<br>
+ナマステ堂<br>
+ラーメン帝国<br>
+３９カレー<br>
+鹿食堂<br>
+香港料理　龍苑<br>
+寵兆<br>
+チャーリーブラウン<br>
+豚マニア<br>
+とんしゃん<br>
+一丁目のドン<br>
+Cafe BAMP<br>
+英会話　iBEES<br>
+（順不同）<br>
+<br>
+<br>
+<br>
+<br>
+<strong>プログラム</strong><br>
+<br>
+河野　令央奈<br>
+白川　紘司<br>
+毛利部　貴義<br>
+古賀　優摩<br>
+藤田　宏樹<br>
+<br>
+<br>
+<br>
+<strong>デザイン</strong><br>
+<br>
+河野　令央奈<br>
+白川　紘司<br>
+毛利部　貴義<br>
+古賀　優摩<br>
+藤田　宏樹<br>
+<br>
+<br>
+<br>
+<strong>音楽</strong><br>
+<br>
+河野　令央奈<br>
+白川　紘司<br>
+毛利部　貴義<br>
+古賀　優摩<br>
+藤田　宏樹<br>
+<br>
+<br>
+<br>
+<strong>撮影</strong><br>
+<br>
+河野　令央奈<br>
+白川　紘司<br>
+毛利部　貴義<br>
+古賀　優摩<br>
+藤田　宏樹<br>
+<br>
+<br>
+<br>
+<strong>参考資料</strong><br>
+<br>
+「ドラゴンクエスト」<br>
+「美味しんぼ」<br>
+「ポケットモンスター」<br>
+<br>
+<br>
+<br>
+<br>
+<strong>参考</strong><br>
+<br>
+SQUARE ENIX<br>
+The pokemon company<br>
+スタジオジブリ<br>
+Universul Studio Japan<br>
+Sony Interactive Enterinment<br>
+Sony Music Enterinment<br>
+Sony Pictures Enterinment<br>
+Apple<br>
+FUJITSU<br>
+<h2><strong>Sun Selco</strong></h2><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>fin</h1><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+つづく・・・・・・？？<br>
+   </div>
+</div>
+		<script>
+		var rollText = document.querySelector("#movie .roll-text");
+		rollText.style.setProperty("bottom" , (rollText.offsetHeight * -1) + "px" , "");
+		</script>
+
+		<a href = "/FOOD_BATTLE/Gameclear">タイトルへ</a>
+</body>
+</html>

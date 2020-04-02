@@ -1,0 +1,96 @@
+@charset "UTF-8";
+body{
+	background-color:black;
+	color : #ffffff;
+}
+img{
+	position: center;
+}
+
+
+}
+h5{text:white;}
+explain{
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:500px;
+	height:100px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+}
+button {
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 10px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+/* .button hover {
+  opacity       : 1;           カーソル時透明度
+} */
+.border1{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:800px;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	padding: 3px;
+}
+.picture{
+
+	width:auto;
+	text-align: center;
+	margin-bottom:30px;
+}
+.border2{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:300px;
+	height:100px;
+	border-style:solid;
+	border-color:white;
+
+	color:white;
+
+
+}
+/* .tableArea {
+  width          : 100%;             100%幅
+  border-collapse: collapse;         境界線結合
+  border-spacing : 0;                罫線間余白
+  font-size      : 9pt;              文字サイズ
+  background     : #ffffff;          テーブル全体の背景色
+}
+ --- ヘッダーのスタイル指定 -------------------
+tableArea th {
+  text-align    : center;            文字位置
+  font-weight   : bold;              太文字
+  padding       : 0px 0px;           余白
+  border        : 1px #666666 solid; 罫線
+}
+ --- 明細のスタイル指定 -----------------------
+.tableArea td {
+  text-align    : center;            文字位置
+  font-weight   : bold;              太文字
+  padding       : 8px 8px;           余白
+  border        : 1px #666666 solid; 罫線
+} */
+iframe1{
+	width	: 200px
+}

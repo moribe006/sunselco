@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>ビック鯛はのぼる</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+
+<h1>店名：ビッグ鯛はのぼる</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/noboru.gif" alt="noboru">
+</div>
+
+<div class = "comment">
+<form action="/FOOD_BATTLE/BossReady" method="get" >
+メニュー：色々<br>
+コメント：<br>
+ちょっとそこのお客さん！！看板に当たらないでもらっていいかな！？倒れるから！！（怒）<br>
+生姜焼き定食のお代は５５０円だよ！<br>
+ちょっと君！５０円足りないじゃないか！！<br>
+こっちは忙しいんだ早くだしてくれ！<br>
+しかも定食のキャベツを残しているじゃないか！！成敗してやる！！<br>
+<button type=submit name="name" value="鯛の大将" >最後の戦いへ</button>
+</form>
+</div>
+</body>
+</html>

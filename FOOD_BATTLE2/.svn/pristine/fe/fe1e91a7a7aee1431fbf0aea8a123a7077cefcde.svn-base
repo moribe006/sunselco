@@ -1,0 +1,159 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "model.HeroStatusBean,model.Enemy,model.ManEnemyBean,model.FoodEnemyBean" %>
+<%  HeroStatusBean sessionhero = (HeroStatusBean)session.getAttribute("hero"); %>
+<%
+Enemy getEnemy = (Enemy)session.getAttribute("enemy");
+%>
+
+<%String a="おばちゃん"; %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="UTF-8">
+<title>SUN SELCO FOOD BATTLE</title>
+<script src="bossattack.js"></script>
+<script src="bossnotattack.js"></script>
+<script src="bosseat.js"></script>
+<script src="bossnoteat.js"></script>
+<script src="bossitemList.js"></script>
+<script src="bossrun.js"></script>
+<link rel = "stylesheet" type = "text/css" href = "css/battlemain.css"/>
+</head>
+<body>
+	<!-- ここに敵の情報とヒーローの情報？ヘッダー？出力 -->
+	<%if(getEnemy.getName().equals("おばちゃん")){ %>
+	<audio src="bgm/abarenbouOP.mp3" autoplay>
+		</audio>
+	<%}else if(getEnemy.getName().equals("おばちゃん")){ %>
+	<audio src="bgm/abarenbouOP.mp3" autoplay>
+			</audio>
+	<%} %>
+
+	<%Enemy enemyDetermine=getEnemy; %>
+
+
+<div class="picture">
+
+     <!-- 敵の名前とHP -->
+     <table class="e">
+     <tr>
+     <td class = "enamesel">名前:</td>
+     <td id="eName"><%=getEnemy.getName()%></td>
+     </tr>
+     <tr>
+     <td class = "ehpsel">ＨＰ:</td>
+     <td id="eHpid"><%=getEnemy.getHp()%></td>
+     </tr>
+     </table>
+     <p id="eAttack" hidden="hidden"><%=getEnemy.getPower() %></p>
+     <p id="DropItem" hidden><%=getEnemy.getDropItem() %></p>
+     <p id="eKcal" hidden="hidden"><%=getEnemy.getKcal() %></p>
+<%--        <div class="e">
+       名前：<%=getEnemy.getName()%><br>
+        HP：<%=getEnemy.getHp()%>
+       </div> --%>
+	<!-- ↓imgで敵の画像を出力 　敵の判別したものをimg変数で回さねばならぬ・・・-->
+	<%if(enemyDetermine.getName().equals("美人")){ %>
+	<img  src = "img/美人.jfif"  alt = "美人">
+
+    <%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<img  src = "img/yubaba.jpg"  alt = "おばちゃん">
+
+	<%}else if(enemyDetermine.getName().equals("39カレー")){ %>
+	<img  src = "img/Curry.png" alt = "39">
+
+	<%}else if(enemyDetermine.getName().equals("ぺぺ")){ %>
+	<img  src = "img/ペペ.gif" alt = "ibees">
+
+	<%}else if(enemyDetermine.getName().equals("ドン")){ %>
+	<img  src = "img/don.jpg" alt = "ドン">
+
+	<%}else if(enemyDetermine.getName().equals("帝王")){ %>
+	<img  src = "img/ラーメン1.gif" alt = "ラーメン">
+
+	<%}else if(enemyDetermine.getName().equals("鹿店主")){ %>
+	<img  src = "img/鹿.gif" alt = "鹿店主">
+
+	<%}else if(enemyDetermine.getName().equals("鯛の大将")){ %>
+	<img  id="e_img" src = "img/noboru.gif" alt = "鯛の大将">
+
+
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
+	<%} %>
+
+ </div>
+
+
+<!-- ヒーローの名前とHP -->
+<div class="y">
+ <img  id="y_img" src = "img/hero.png"  alt = "勇者">
+<table class="h">
+<tr>
+<td class = "hnamesel">名前:</td>
+<td id="hName"><%= sessionhero.getName()%></td>
+</tr>
+<tr>
+<td class = "hhpsel">ＨＰ:</td>
+<td id="hHpid" class ="hHpid"><%= sessionhero.getHp()%></td>
+<td class = "hmpsel">ＭＰ:</td>
+<td id="hMpid"><%= sessionhero.getMp()%></td>
+</tr>
+</table>
+<p id="hAttack" hidden="hidden"><%= sessionhero.getPower() %></p>
+<p id="hHungry" hidden="hidden"><%= sessionhero.getHungry() %></p>
+<%--    <div class="h">
+    名前：<%= sessionhero.getName()%><br>
+    HP：<%= sessionhero.getHp()%>
+    MP：<%= sessionhero.getHp()%>
+   </div> --%>
+</div>
+
+<!------------------------ コマンドとテキスト表示 ----------------------------->
+
+<div class = "outline">
+	<div class = "comand">
+		<ul>
+			<li><% if(getEnemy instanceof ManEnemyBean){ %><input id="attackBt" type="button" value="戦う"  onclick="return attack()">
+			<%}else{%><input id="notattackBt" type="button" value="戦う"  onclick="return notattack()"><% } %></li>
+			<li><% if(getEnemy instanceof FoodEnemyBean){ %><input id="eatBt" type="button" value="食べる"  onclick="return eat()">
+			<%}else{%><input id="noteatBt" type="button" value="食べる"  onclick="return noteat()"><% } %></li>
+    		<li><input id="itemBt" type="button" value="アイテム"  onclick="return itemList()"></li>
+			<li><input id="runBt" type="button" value="逃げる"  onclick="return run()"></li>
+		</ul>
+	</div>
+	<div class = "text">
+	<p id="comment">ここにコマンド後の内容が表示されます。</p>
+
+	</div>
+</div>
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+<!--
+主人公のステータスはヘッダーで上に表示してほしぃ・・・
+	<div style="position:center; margin-left:auto; margin-right:auto;">
+	<table style="width:700px;height:250px;margin-left:auto;margin-right:auto">
+
+	<tr><td>
+	<iframe src="BattleCommand.jsp" style="border:1;width:700px;height:200px;position:center">
+	</iframe>
+	</td></tr>
+	</table>
+	</div>
+ -->
+</body>
+</html>

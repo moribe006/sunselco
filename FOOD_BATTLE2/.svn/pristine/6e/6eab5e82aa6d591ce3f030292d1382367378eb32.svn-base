@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>龍苑</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+
+<h1>店名：龍苑(りゅうえん)</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/ryuen.png" alt="39">
+</div>
+
+<div class="comment">
+中華料理屋さんです。<br>
+無休で昼は11:30から営業してます。<br>
+福建風のお料理をだされます。<br>
+<br>
+<br>
+<br>
+<br>
+<form action="/FOOD_BATTLE/Ready" method="get" >
+<button type=submit name="name" value="やきそば" >いざ勝負！</button>
+</form>
+</div>
+</body>
+</html>

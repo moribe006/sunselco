@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+</head>
+<body>
+進むマップを選ぶのだ。
+
+<%for(WeaponBean a : hero.getHojiSoubi() ){ %>
+<form action="/servlet/Weapon.java" method="get">
+<a href> <%= a.getName() %> </a>
+
+</form>
+
+
+<% } %>
+
+
+
+
+%>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>Cafe BAMP</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/charry.css">
+</head>
+<body>
+
+<h1>店名：Cafe BAMP</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/bamp_soto.png" alt="39">
+</div>
+<div class="comment">
+<form action="/FOOD_BATTLE/Ready" method="get" >
+メニュー：日替わりサービスランチ、週替わりパスタランチ、オムライス<br>
+コメント：<br>
+アットホームでどこか懐かしさが漂う店内<br>
+野菜は自家製栽培でパン生地やソースもすべて手作り<br>
+天気のいい日にはテラス席で優雅にランチ<br>
+店内のギターは演奏OK、大型TVでスポーツ観戦も<br>
+落ち着いた雰囲気でこだわりの料理をお楽しみ下さい！<br>
+<button type=submit name="name" value="スープパスタ" >いざ！勝負！</button>
+</form>
+</div>
+</body>
+</html>

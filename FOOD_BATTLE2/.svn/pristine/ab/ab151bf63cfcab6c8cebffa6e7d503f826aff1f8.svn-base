@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>ナマステ堂</title>
+<link rel = "stylesheet"type="text/css"href="/FOOD_BATTLE/css/textkiso.css">
+</head>
+<body>
+
+<h1>店名：ナマステ堂</h1>
+
+
+<div class="picture">
+<img src="/FOOD_BATTLE/img/namasutedou.png" alt="39">
+</div>
+
+<div class="comment">
+This ia a カレーワールド<br>
+リーマン御用達のカレー店<br>
+最強に辛い地獄キーマを注文だ！<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action="/FOOD_BATTLE/Ready" method="get" >
+<button type=submit name="name" value="地獄キーマカレー" >ナマステ？（店長）</button>
+</form>
+</div>
+</body>
+</html>
