@@ -19,11 +19,13 @@ function run(){
 		//人型の場合はeAttackの攻撃力を取得、フード型の場合はeKcalの値を取得
 		var eAttack = document.getElementById("eAttack").textContent;
 		var eKcal = document.getElementById("eKcal").textContent;
+		var music1 = new Audio("bgm/run2.wav");
 
 
 		//逃げる成功文字と、マップに戻るをinnerHtmlで表示
 		document.getElementById('comment').innerHTML = '食い逃げに成功した'+
-		'<form action="/FOOD_BATTLE/Run" method="get"><button type="submit"  name="hp" value= '+ rr +' >"マップ戻る"</button></form>';
+		'<form action="/FOOD_BATTLE/Run" method="get"><button type="submit"  name="hp" value= '+ rr +' >マップ戻る</button></form>';
+		music1.play();
 		setTimeout(() => {
 			document.getElementById("y_img").style.visibility = "hidden";
 		}, 200);

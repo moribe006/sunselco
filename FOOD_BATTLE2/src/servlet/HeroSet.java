@@ -27,34 +27,64 @@ public class HeroSet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+
+		 // キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
+//		    response.setContentType("text/html; charset=Shift_JIS");
+//		    PrintWriter out = response.getWriter();
+//		    out.println("<html>");
+//		    out.println("<head><title>CacheServlet</title></head>");
+//		    out.println("<body>");
+//		    out.println("このページはキャッシュされません。");
+//		    out.println("</body></html>");
+//		    out.close();
 
 
+
+		//セッション破棄
+		try {
+		HttpSession session1 = request.getSession();
+		HeroStatusBean hero1=(HeroStatusBean)session1.getAttribute("hero");
+		if(hero1.getName()==name||hero1!=null||hero1.getName()==null||hero1.getName()=="") {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		}}catch(Exception e) {
+		}
+
+//		if(name =="") {
+//			name=null;
+//		}
+		//アイテムリストをセッションに保存
 		ItemDao itemDao = new ItemDao();
 		List<ItemBean> itemList = itemDao.findAll();
 		HttpSession session3 = request.getSession();
 		session3.setAttribute("itemList", itemList);
-
+		//装備リストをセッションに保存
 		WeaponDao weaponDao = new WeaponDao();
 		List<WeaponBean> weaponList = weaponDao.findAll();
 		HttpSession session4 = request.getSession();
 		session4.setAttribute("weaponList", weaponList);
-
-		String name = request.getParameter("name");
-
+		//heroのインスタンス化（セッションに保存）
 		HeroStatusBean hero = new HeroStatusBean(name,100,20,20,0);
+		//heroにアイテムリストをセット
 		if( hero.getPersonal_belogingsList().size()==0) {
 			hero.setPersonal_belogingsList(itemList);
 			hero.setPersonal_belogingsList();
 		}
+		//heroに装備リストをセット
 		if( hero.getPersonal_equipmentList().size()==0) {
 			hero.setPersonal_equipmentList(weaponList);
 			hero.setPersonal_equipmentList();
+			//初期装備ではしを持たせる（装備はさせない）
 			String syoki="はし";
 			hero.setPersonal_equipmentList(syoki);
 		}
 
 
-
+		//heroのセッションを保存
 		HttpSession session5 = request.getSession();
 		session5.setAttribute("hero", hero);
 

@@ -95,6 +95,9 @@ function kizuuse(){
 	var hname = document.getElementById("hName").textContent;
 	var hhp = document.getElementById("hHpid").textContent;
 	var hmp = document.getElementById("hMpid").textContent;
+	var music2 = new Audio("bgm/heal.mp3");
+
+
 
 
 	//アイテムを使用したときの表示と処理
@@ -111,6 +114,7 @@ function kizuuse(){
 			//勇者のHP,MPを書き換え
 			var hhpAfter = (Number(hhp) + Number(khp));
 			document.getElementById('hHpid').innerHTML = hhpAfter;
+			music2.play();
 
 		//勇者の回復可能量がアイテム回復量より少ない場合は計算の数値を取得
 		}else if(hpjuge <= Number(khp)){
@@ -118,6 +122,7 @@ function kizuuse(){
 			//勇者のHP,MPを書き換え
 			var hhpAfter = (Number(hhp) + Number(hpjuge));
 			document.getElementById('hHpid').innerHTML = hhpAfter;
+			music2.play();
 		}
 
 		//使用したアイテムを減らす処理
@@ -142,6 +147,7 @@ function kizuuse(){
 		var notattackBt = document.getElementById("notattackBt");
 		var itemBt = document.getElementById("itemBt");
 		var runBt = document.getElementById("runBt");
+		var music1 = new Audio("bgm/punch-stop1.mp3");
 
 		var randomH = Math.floor((Math.random()*5)+8)/10;
 		var randomE = Math.floor((Math.random()*5)+8)/10;
@@ -153,6 +159,7 @@ function kizuuse(){
 			runBt.disabled = true;
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music1.play();
 				setTimeout(() => {
 				document.getElementById("y_img").style.visibility = "hidden";
 					setTimeout(() => {
@@ -203,6 +210,7 @@ function kizuuse(){
 			runBt.disabled = true;
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music1.play();
 				setTimeout(() => {
 					document.getElementById("y_img").style.visibility = "hidden";
 						setTimeout(() => {
@@ -261,6 +269,9 @@ function iguuse(){
 	var hname = document.getElementById("hName").textContent;
 	var hhp = document.getElementById("hHpid").textContent;
 	var hmp = document.getElementById("hMpid").textContent;
+	var music2 = new Audio("bgm/heal.mp3");
+
+
 
 	//アイテムを使用したときの表示と処理
 	if(Number(hmp) === 0){
@@ -276,6 +287,7 @@ function iguuse(){
 			//勇者のHP,MPを書き換え
 			var hmpAfter = (Number(hmp) - Number(imp));
 			document.getElementById('hMpid').innerHTML = hmpAfter;
+			music2.play();
 
 			//勇者の回復可能量がアイテム回復量より少ない場合は計算の数値を取得
 		}else if(mpjuge <= Number(imp)){
@@ -283,11 +295,13 @@ function iguuse(){
 			//勇者のHP,MPを書き換え
 			var hmpAfter = (Number(hmp) - Number(mpjuge));
 			document.getElementById('hMpid').innerHTML = hmpAfter;
+			music2.play();
 		}
 
 		//使用したアイテムを減らす処理
 		var usenumber = (Number(inumber) - 1);
 		document.getElementById('inumber').innerHTML = usenumber;
+
 		var eName = document.getElementById("eName").textContent;
 		var hName = document.getElementById("hName").textContent;
 		var eHp = document.getElementById("eHpid").textContent;
@@ -306,9 +320,12 @@ function iguuse(){
 		var notattackBt = document.getElementById("notattackBt");
 		var itemBt = document.getElementById("itemBt");
 		var runBt = document.getElementById("runBt");
+		var music1 = new Audio("bgm/punch-stop1.mp3");
+
 
 		var randomH = Math.floor((Math.random()*5)+8)/10;
 		var randomE = Math.floor((Math.random()*5)+8)/10;
+
 
 		if(Number(eAttack) > 0){
 			attackBt.disabled = true;
@@ -317,6 +334,7 @@ function iguuse(){
 			runBt.disabled = true;
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music1.play();
 				setTimeout(() => {
 				document.getElementById("y_img").style.visibility = "hidden";
 					setTimeout(() => {
@@ -367,6 +385,7 @@ function iguuse(){
 			runBt.disabled = true;
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music1.play();
 				setTimeout(() => {
 					document.getElementById("y_img").style.visibility = "hidden";
 						setTimeout(() => {
@@ -417,16 +436,18 @@ function iguuse(){
 //ペペを使用したときの処理を実行するメソッド
 function pepeuse(){
 	//傷薬の値を取得
-	var qname = document.getElementById("iname").textContent;
-	var qhp = document.getElementById("ihp").textContent;
-	var qmp = document.getElementById("imp").textContent;
-	var qnumber = document.getElementById("inumber").textContent;
+	var qname = document.getElementById("qname").textContent;
+	var qhp = document.getElementById("qhp").textContent;
+	var qmp = document.getElementById("qmp").textContent;
+	var qnumber = document.getElementById("qnumber").textContent;
 
 
 	//勇者の名前、hp,mpをjspから取得して定義
 	var hname = document.getElementById("hName").textContent;
 	var hhp = document.getElementById("hHpid").textContent;
 	var hmp = document.getElementById("hMpid").textContent;
+	var music2 = new Audio("bgm/heal.mp3");
+
 
 
 	//アイテムを使用したときの表示と処理
@@ -438,6 +459,7 @@ function pepeuse(){
 		//勇者のHPとMPを100に書き換え
 		document.getElementById('hHpid').innerHTML = 100;
 		document.getElementById('hMpid').innerHTML = 0;
+		music2.play();
 
 		//使用したアイテムを減らす処理
 	var usenumber = (Number(qnumber) - 1);
@@ -461,6 +483,7 @@ function pepeuse(){
 	var notattackBt = document.getElementById("notattackBt");
 	var itemBt = document.getElementById("itemBt");
 	var runBt = document.getElementById("runBt");
+	var music1 = new Audio("bgm/punch-stop1.mp3");
 
 	var randomH = Math.floor((Math.random()*5)+8)/10;
 	var randomE = Math.floor((Math.random()*5)+8)/10;
@@ -472,6 +495,7 @@ function pepeuse(){
 		runBt.disabled = true;
 		setTimeout(() => {
 			document.getElementById('comment').innerHTML = eName + 'の攻撃';
+			music1.play();
 			setTimeout(() => {
 			document.getElementById("y_img").style.visibility = "hidden";
 				setTimeout(() => {
@@ -522,6 +546,7 @@ function pepeuse(){
 		runBt.disabled = true;
 		setTimeout(() => {
 			document.getElementById('comment').innerHTML = eName + 'の攻撃';
+			music1.play();
 			setTimeout(() => {
 				document.getElementById("y_img").style.visibility = "hidden";
 					setTimeout(() => {

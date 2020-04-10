@@ -32,7 +32,6 @@ public class Weapon extends HttpServlet {
 				if(weapon.getPersonal()) {
 				hero.setEquipment(weapon);
 				}else {
-				System.out.println("装備できませんでした");
 				}
 		HttpSession session2 = request.getSession();
 		session2.setAttribute("hero", hero);

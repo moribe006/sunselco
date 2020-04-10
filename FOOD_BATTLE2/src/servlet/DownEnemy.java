@@ -24,16 +24,18 @@ public class DownEnemy extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		//飛んできたvalueの中身を受け取り文字列を分けて各種値を作る
 		String get =request.getParameter("name");
-		String get2[]=get.split(",");
-		String text = get2[0];
-		String hHp	= get2[1];
-		String hMp	= get2[2];
-		String drop = get2[3];
-		int kizu    = Integer.parseInt(get2[4]);//傷薬
-		int igu		= Integer.parseInt(get2[5]);//胃薬
-		int nazo	= Integer.parseInt(get2[6]);//ぺぺ
+		String get2[]=get.split(",");			 //スピリットで,で分ける
+		String text = get2[0];					 //中身は敵の名前
+		String hHp	= get2[1];					 //heroのHP
+		String hMp	= get2[2];					 //heroのMP
+		String drop = get2[3];					 //敵のドロップ品の名前
+		int kizu    = Integer.parseInt(get2[4]);//傷薬の残りの数
+		int igu		= Integer.parseInt(get2[5]);//胃薬の残りの数
+		int nazo	= Integer.parseInt(get2[6]);//ぺぺの残りの数
 
+		//敵の判別を行い、敵のHPに0を代入する。
 		HttpSession session1 = request.getSession();
 		List<ManEnemyBean> manEnemyList = (List<ManEnemyBean>)session1.getAttribute("manEnemyList");
 		loop:for(ManEnemyBean e: manEnemyList) {
@@ -73,7 +75,7 @@ public class DownEnemy extends HttpServlet {
 				//アイテムリストを回す
 				HttpSession session7 = request.getSession();
 				List<ItemBean>itemList=(List<ItemBean>)session7.getAttribute("itemList");
-				//javaすく（アイテム個数処理）
+				//javaすく（アイテム個数処理）残りの数をセットする
 				 for(ItemBean a:hero.getPersonal_belogingsList()) {
 					 if(a.getName().equals("傷薬")) {
 						 if(kizu!=a.getHave()) {
@@ -88,7 +90,7 @@ public class DownEnemy extends HttpServlet {
 						 a.setHave(nazo);
 						 }}}
 
-				//ドロップしたアイテムを取得する
+				//ドロップしたアイテムを判別し取得する
 				for(ItemBean item:itemList) {
 				if(drop.equals(item.getName())){
 				hero.setPersonal_belongings(drop);

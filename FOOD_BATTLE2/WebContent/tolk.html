@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- BGMを入れています -->
+<audio src="bgm/tolk.mp3" autoplay></audio>
+
 
 <div class = "tolk">
 <img src = "img/yuka.gif" width = "600" height = "500" alt = "tolk">
@@ -31,8 +34,15 @@
 </div>
 
 
-
-
+<!--音を出すメソッド（ジャヴァすく）  -->
+	<script type="text/javascript">
+		function ring() {
+			document.getElementById("button_sound").play();
+		}
+	</script>
+<!--idへ音を設定(src)  -->
+    <audio id="button_sound" preload="auto" src="bgm/pi.wav" type="audio/wav">
+    </audio>
 
 
 
@@ -48,7 +58,7 @@
 
 
 <form action = "/FOOD_BATTLE/StartAllList"  method = "get">
-<input type = "submit" value= "NEXT"><br>
+<input type = "submit" value= "つぎへ" onclick="ring()"><br>
 </form>
 
 </div>

@@ -53,10 +53,7 @@
      <p id="eAttack" hidden="hidden"><%=getEnemy.getPower() %></p>
      <p id="DropItem" hidden><%=getEnemy.getDropItem() %></p>
      <p id="eKcal" hidden="hidden"><%=getEnemy.getKcal() %></p>
-<%--        <div class="e">
-       名前：<%=getEnemy.getName()%><br>
-        HP：<%=getEnemy.getHp()%>
-       </div> --%>
+
 	<!-- ↓imgで敵の画像を出力 　敵の判別したものをimg変数で回さねばならぬ・・・-->
 	<%if(enemyDetermine.getName().equals("美人")){ %>
 	<img  src = "img/美人.jfif"  alt = "美人">
@@ -81,6 +78,8 @@
 
 	<%}else if(enemyDetermine.getName().equals("鯛の大将")){ %>
 	<img  id="e_img" src = "img/noboru.gif" alt = "鯛の大将">
+	<audio src="bgm/boss.mp3" autoplay>
+			</audio>
 
 
 	<%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
@@ -112,11 +111,7 @@
 </table>
 <p id="hAttack" hidden="hidden"><%= sessionhero.getPower() %></p>
 <p id="hHungry" hidden="hidden"><%= sessionhero.getHungry() %></p>
-<%--    <div class="h">
-    名前：<%= sessionhero.getName()%><br>
-    HP：<%= sessionhero.getHp()%>
-    MP：<%= sessionhero.getHp()%>
-   </div> --%>
+
 </div>
 
 <!------------------------ コマンドとテキスト表示 ----------------------------->
@@ -166,17 +161,6 @@
 
 
 
-<!--
-主人公のステータスはヘッダーで上に表示してほしぃ・・・
-	<div style="position:center; margin-left:auto; margin-right:auto;">
-	<table style="width:700px;height:250px;margin-left:auto;margin-right:auto">
 
-	<tr><td>
-	<iframe src="BattleCommand.jsp" style="border:1;width:700px;height:200px;position:center">
-	</iframe>
-	</td></tr>
-	</table>
-	</div>
- -->
 </body>
 </html>

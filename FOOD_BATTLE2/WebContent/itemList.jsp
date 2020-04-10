@@ -9,6 +9,7 @@
 
 <meta charset="UTF-8">
 <title>アイテム一覧</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <link rel = "stylesheet" type = "text/css" href = "css/List.css"/>
 </head>
 <body>
@@ -31,7 +32,7 @@
 </table>
 使用したいアイテムを選んでください。
 <form class=button action = map.jsp method="get">
-<button type=submit class=button style="width: 178px; ">戻る</button>
+<button type=submit class=back >戻る</button>
 </form>
 </body>
 </html>

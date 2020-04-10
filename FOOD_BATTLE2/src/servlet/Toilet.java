@@ -12,22 +12,13 @@ import javax.servlet.http.HttpSession;
 
 import model.HeroStatusBean;
 
-/**
- * Servlet implementation class Toilet
- */
 @WebServlet("/Toilet")
 public class Toilet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		HttpSession session = request.getSession();
 		HeroStatusBean hero = (HeroStatusBean)session.getAttribute("hero");
+		//回復の為、マックスの値をセット
 		hero.setHp(hero.getMaxhp());
 		hero.setMp(hero.getMinmp());
 		HttpSession session5 = request.getSession();

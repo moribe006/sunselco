@@ -4,39 +4,42 @@
 <%HeroStatusBean hero = (HeroStatusBean)session.getAttribute("hero");%>
 <%List<FoodEnemyBean> foodEnemyList =(List<FoodEnemyBean>)session.getAttribute("foodEnemyList");%>
 <%List<ManEnemyBean> manEnemyList = (List<ManEnemyBean>)session.getAttribute("manEnemyList");%>
+<!--キャッシュ破棄  -->
+<%@ page import = "javax.servlet.*, javax.servlet.http.*,java.io.*,java.util.*" %>
+<%response.setHeader("Pragma","no-cache"); %>
+<%response.setHeader("Cache-Control","no-cache"); %>
+<%response.setDateHeader("Expires",0); %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <title>マップ</title>
 <link rel = "stylesheet" type = "text/css" href = "css/map.css"/>
 </head>
 <body>
-<table class=border3>
-<tr><td style="width: 236px; ">
-<!-- 主人公データ -->
-<table class=border4 style="width: 224px; ">
-<tr><td>名前：<%=hero.getName() %></td></tr>
-<tr><td>ＨＰ：<%=hero.getHp() %>/<%=hero.getMaxhp() %></td></tr>
-<tr><td>ＭＰ：<%=hero.getMp() %>/100</td></tr>
-<tr><td>装備：<%=hero.getEquipmentName() %></td></tr>
-<tr><td>攻撃力/食欲：<%=hero.getPower() %>/<%=hero.getHungry() %></td></tr>
-</table>
-</td> <!-- 画像出力 -->
-<td style="width: 888px; "><img src="/FOOD_BATTLE/img/yusya.jpg" class=img alt="主人公">
-</td>
-<td>
-</td>
-</tr>
-</table>
 
-<table class=border1>
-<tr>
-<td>
-<table style=margin-left:auto;margin-right:auto;>
-<tr>
-<td></td>
-<td>
+<audio src="bgm/map.mp3" autoplay></audio>
+
+<div class =status>
+<img src="/FOOD_BATTLE/img/hero.png" class=img alt="主人公" >
+<div class =statusalea>
+	<ul>
+		<li>名前：<%=hero.getName() %></li>
+		<li class=hp>ＨＰ：<%=hero.getHp() %>/<%=hero.getMaxhp() %></li>
+		<li>ＭＰ：<%=hero.getMp() %>/100</li>
+		<li class=weapon>装備：<%=hero.getEquipmentName() %></li>
+		<li>攻撃力/食欲：<%=hero.getPower() %>/<%=hero.getHungry() %></li>
+
+	</ul>
+</div>
+
+</div>
+
+<!--------------------------------------------------------------------------------------------------------->
+
+
+<div class = bossmap>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m1:manEnemyList){ %>
 			 <%for(FoodEnemyBean f1:foodEnemyList){ %>
@@ -61,21 +64,13 @@
 				<button class=button2 type=submit name="name"  style="width: 220px">ビック鯛はのぼる(MAN)</button>
 				</form>
 				<%break loop;}}}%>
-</td>
-<td></td>
-</tr>
-</table>
+</div>
 
+<!-- ------------------------------------------------------------------------------------------------- -->
 
-<tr><td>
-<table style=margin-left:auto;margin-right:auto;>
-<tr>
-<tr>
-<td>
-<table class=border2>
-<tr>
-<td ></td>
-<td>
+<div class=map>
+<div class = leftmap>
+<div class = teikoku>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%if(m.getName().equals("帝王")&&m.getHp()==0){ %>
@@ -94,8 +89,9 @@
 			<button class=buttonwait type=submit name="name" >ラーメン帝国</button>
 			<%break loop; }}}	}%>
 			<!--中ボス -->
-</td></tr>
-<tr><td>
+</div>
+
+<div class=cafe>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
@@ -112,8 +108,9 @@
 			<%if(m.getName().equals("鹿店主")&&m.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >Cafe BAMP</button>
 			<%break loop;}}}%>
-<td></td>
-<td>
+</div>
+
+<div class=don>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
@@ -130,8 +127,9 @@
 			<%if(f.getName().equals("海鮮丼")&&f.getHp()>0){%>
 			<button class=buttonwait type=submit name="name">一丁目のドン</button>
 			<%break loop;}}}%>
-</td></tr>
-<tr><td>
+</div>
+
+<div class=sika>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%for(ManEnemyBean m2:manEnemyList){ %>
@@ -148,9 +146,10 @@
 			<%if(m.getName().equals("おばちゃん")&&m.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >鹿食堂</button>
 			<%break loop;}}}%>
-</td>
-<td></td>
-<td>
+</div>
+
+
+<div class=tyou>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
@@ -167,11 +166,9 @@
 			<%if(m.getName().equals("おばちゃん")&&m.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >寵兆</button>
 			<%break loop;}}}%>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
+</div>
+
+<div class=ton>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%if(m.getName().equals("おばちゃん")&&m.getHp()>0){ %>
@@ -183,18 +180,16 @@
 			<%if(m.getName().equals("おばちゃん")&&m.getHp()==0){ %>
 			<button class=buttonend type=submit name="name">閉店</button>
 			<%break loop;}}}%>
-</td>
-</tr>
-</table>
+</div>
+</div>
 
-</td>
-<td>　　　　　　</td>
 
-<td>
-<table class=border2>
-<tr>
-<td></td>
-<td>
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+
+<div class = rightmap>
+
+<div class = namasute>
 <%loop:for(int i=0;i<1;i++){ %>
 <%for(FoodEnemyBean f:foodEnemyList){ %>
 			<%if(f.getName().equals("地獄キーマカレー")&&f.getHp()==0){ %>
@@ -215,10 +210,10 @@
 			<button class=buttonwait type=submit name="name" >ナマステ堂</button>
 			<%break loop;}}}  }%>
 			<!--中ボス  -->
-</td>
-</tr>
-<tr>
-<td>
+</div>
+
+
+<div class = buta>
 <%loop:for(int i=0;i<1;i++){ %>
 	<%for(FoodEnemyBean f:foodEnemyList){ %>
 	<%for(ManEnemyBean m:manEnemyList){ %>
@@ -235,9 +230,9 @@
 			<%if(m.getName().equals("ぺぺ")&&m.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >豚マニ</button>
 			<%break loop;}}}%>
-</td>
-<td></td>
-<td>
+</div>
+
+<div class = tyari>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
@@ -254,10 +249,10 @@
 			<%if(f.getName().equals("やきそば")&&f.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >チャーリ</button>
 			<%break loop;}}}%>
-</td>
-</tr>
-<tr>
-<td>
+</div>
+
+
+<div class = ibees>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(ManEnemyBean m:manEnemyList){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
@@ -274,9 +269,9 @@
 			<%if(f.getName().equals("39カレー")&&f.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >iBEES</button>
 			<%break loop;}}}%>
-</td>
-<td></td>
-<td>
+</div>
+
+<div class = ryu>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
 		<%for(FoodEnemyBean f2:foodEnemyList){ %>
@@ -293,10 +288,9 @@
 			<%if(f.getName().equals("39カレー")&&f.getHp()>0){%>
 			<button class=buttonwait type=submit name="name" >龍苑</button>
 			<%break loop;}}}%>
-</td>
-<tr>
-<td></td>
-<td>
+</div>
+
+<div class = carry>
 <%loop:for(int i=0;i<1;i++){ %>
 		<%for(FoodEnemyBean f:foodEnemyList){ %>
 		<%if(f.getName().equals("39カレー")&&f.getHp()>0){ %>
@@ -308,61 +302,48 @@
 		<%if(f.getName().equals("39カレー")&&f.getHp()==0){ %>
 		<button class=buttonend type=submit name="name">閉店</button>
 		<%break loop;}}}%>
-</td>
-</tr>
-</table>
-</table>
-</table>
+</div>
+</div>
+</div>
 
 
+<!--------------------------------------------------------------------------------------------------------->
 
-<table class=border1 >
-<tr><td>
+
+<div class = textalea>
 <!--text一覧  -->
 行動を選択してください<br>
 <button class=button3 type=submit disabled >営業中</button>
-<button class=buttonwait type=submit disabled >OPEN前</button>
-<button class=buttonend type=submit disabled >閉店</button><br>
+<button class= wait type=submit disabled >OPEN前</button>
+<button class=end type=submit disabled >閉店</button><br>
 <br>
 <br>
+
+<div class= slectalea>
 <!--テキスト下部  -->
 ※トイレでは回復を行います。(HPをMAX：MPを0へ)<br>
-※MPは100になると死亡してしまいます。(こまめにトイレに駆け込んでください。)<br>
-※所持アイテム一覧ではアイテムの使用ができます。<br>
-※所持装備一覧では装備が選択できます。<br>
+※ＨＰは0、ＭＰは100になると死亡してしまいます。(こまめにトイレに駆け込んでください。)<br>
 
 
-<table>
-<tr>
-<td></td>
-<td>
-<table>
-<tr><td>
-
+<div class = listbutton>
 <!-- コマンド一覧 -->
 <form action="Toilet"  method="get">
-<button class=button1 type=submit name="name" style="width: 120px">トイレ(回復)</button>
+<button class=lowbutton type=submit name="name" >トイレ(回復)</button>
 </form>
-</td>
-<td>
 <form action="itemList.jsp" >
-<button class=button1 type=submit name="name" value="item"style="width: 150px">所持アイテム一覧</button>
+<button class=lowbutton type=submit name="name" value="item">アイテム一覧</button>
 </form>
-</td>
-<td>
 <form action="weaponList.jsp" >
-<button class=button1 type=submit name="name" value="Equipment"style="width: 150px">所持装備一覧</button>
+<button class=lowbutton type=submit name="name" value="Equipment">装備一覧</button>
 </form>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
+</div>
+</div>
+
+</div>
 
 
-</td></tr>
-</table>
+
+
 
 </body>
 </html>

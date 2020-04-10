@@ -18,7 +18,11 @@ function eat(){
 
 	var randomH = Math.floor((Math.random()*5)+8)/10;
 	var randomE = Math.floor((Math.random()*5)+8)/10;
-	
+
+	var music1 = new Audio("bgm/cancel1.mp3");
+	var music2 = new Audio("bgm/punch-stop1.mp3");
+	var music3 = new Audio("bgm/battleEnd2.mp3");
+
 //		操作中ボタンを無効
 		eatBt.disabled = true;
 		notattackBt.disabled = true;
@@ -27,6 +31,7 @@ function eat(){
 
 
 		document.getElementById('comment').innerHTML = hName + 'の食事';
+		music1.play();
 		setTimeout(() => {
 			document.getElementById("e_img").style.visibility = "hidden";
 				setTimeout(() => {
@@ -46,9 +51,9 @@ function eat(){
 				}, 100);
 			}, 200);
 		setTimeout(() => {
-			document.getElementById('comment').innerHTML = eName + 'を' + (hHungry * randomH) + 'ｇ、減らした';
+			document.getElementById('comment').innerHTML = eName + 'を' + Math.floor(hHungry * randomH) + 'ｇ、減らした';
 //			HP計算および書き換え
-			var eHpAfter = (Number(eHp) - Number(hHungry * randomH));
+			var eHpAfter = (Number(eHp) - Math.floor(hHungry * randomH));
 			document.getElementById('eHpid').innerHTML = eHpAfter;
 //			enemyのHPが0の場合、マップボタン表示
 			if(eHpAfter <= 0){
@@ -56,9 +61,11 @@ function eat(){
 				document.getElementById("e_img").style.visibility = "hidden";
 				document.getElementById('comment').innerHTML = eName + 'を倒した！！' + DropItem + 'をゲット！！' +
 				'<form action="/FOOD_BATTLE/DownEnemy" method="get"><button type="submit"  name="name" value= '+eName+','+hHp+','+hMp+','+DropItem+','+ knumber+','+inumber+','+qnumber+' >マップへ戻る</button></form>';
+				music3.play();
 				return}
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music2.play();
 				setTimeout(() => {
 					document.getElementById("y_img").style.visibility = "hidden";
 						setTimeout(() => {

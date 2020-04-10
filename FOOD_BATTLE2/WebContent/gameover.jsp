@@ -9,6 +9,11 @@
 <link rel = "stylesheet" type = "text/css" href = "css/gameover.css"/>
 </head>
 <body>
+
+<audio autoplay>
+<source src="bgm/gameover.wav" >
+</audio>
+
 	<div class = "gameover">
 		<img src = "img/gameover.jpg"  alt = "ゲームオーバー">
 	</div>

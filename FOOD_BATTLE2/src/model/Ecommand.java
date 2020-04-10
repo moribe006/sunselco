@@ -2,7 +2,7 @@ package model;
 
 
 
-public class Ecommand {
+public class Ecommand{
 
 	public void attack(HeroStatusBean hero, Enemy enemy){
 		if(enemy instanceof ManEnemyBean) {

@@ -12,6 +12,7 @@ List<WeaponBean> Personal_equipment = (List<WeaponBean>)request.getAttribute("Pe
 <head>
 <meta charset="UTF-8">
 <title>武器一覧</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <link rel = "stylesheet" type = "text/css" href = "css/List.css"/>
 </head>
 <body>
@@ -31,13 +32,13 @@ List<WeaponBean> Personal_equipment = (List<WeaponBean>)request.getAttribute("Pe
 <tr><td>装備なし</td><td>0</td><td>0</td><td>  </td>
 <td>
 <form action="/FOOD_BATTLE/Weapon" method="get">
-<button class=button type=submit name=name value=nasi>装備を外す</button>
+<button class=button type=submit name=name value=nasi>外す</button>
 </form>
 </td><tr>
 </table>
 装備を選択してください
 <form class=button action = map.jsp method="get">
-<button type=submit class=button style="width: 178px; ">戻る</button>
+<button type=submit class=back>戻る</button>
 </form>
 </body>
 </html>

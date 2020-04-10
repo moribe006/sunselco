@@ -4,6 +4,7 @@ function notattack(){
 		var hName = document.getElementById("hName").textContent;
 		var eHp = document.getElementById("eHpid").textContent;
 		var hHp = document.getElementById("hHpid").textContent;
+		var hMp = document.getElementById("hMpid").textContent;
 		var hAttack =  document.getElementById("hAttack").textContent;
 		var eAttack = document.getElementById("eAttack").textContent;
 		var hHungry =  document.getElementById("hHungry").textContent;
@@ -12,6 +13,8 @@ function notattack(){
 		var eatBt = document.getElementById("eatBt");
 		var itemBt = document.getElementById("itemBt");
 		var runBt = document.getElementById("runBt");
+		var music1 = new Audio("bgm/miss.mp3");
+		var music2 = new Audio("bgm/punch-stop1.mp3");
 		
 		var randomH = Math.floor((Math.random()*5)+8)/10;
 		var randomE = Math.floor((Math.random()*5)+8)/10;
@@ -23,6 +26,7 @@ function notattack(){
 			runBt.disabled = true;
 
 			document.getElementById('comment').innerHTML = hName + 'の攻撃';
+			music1.play();
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'には効果がないようだ';
 //				HP計算および書き換え
@@ -35,6 +39,7 @@ function notattack(){
 	//				return}
 				setTimeout(() => {
 					document.getElementById('comment').innerHTML = eName + 'の攻撃';
+					music2.play();
 						setTimeout(() => {
 						document.getElementById("y_img").style.visibility = "hidden";
 							setTimeout(() => {

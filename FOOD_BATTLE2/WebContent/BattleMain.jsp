@@ -25,18 +25,11 @@
 <link rel = "stylesheet" type = "text/css" href = "css/battlemain.css"/>
 </head>
 <body>
-	<!-- ここに敵の情報とヒーローの情報？ヘッダー？出力 -->
-	<%if(getEnemy.getName().equals("おばちゃん")){ %>
-	<audio src="bgm/abarenbouOP.mp3" autoplay>
-		</audio>
-	<%}else if(getEnemy.getName().equals("おばちゃん")){ %>
-	<audio src="bgm/abarenbouOP.mp3" autoplay>
-			</audio>
-	<%} %>
+
 
 	<%Enemy enemyDetermine=getEnemy; %>
 
-
+<div class= all>
 <div class="picture">
 
      <!-- 敵の名前とHP -->
@@ -60,45 +53,73 @@
 	<!-- ↓imgで敵の画像を出力 　敵の判別したものをimg変数で回さねばならぬ・・・-->
 	<%if(enemyDetermine.getName().equals("美人")){ %>
 	<img id="e_img" src = "img/bijin.jpg"  alt = "美人">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
     <%}else if(enemyDetermine.getName().equals("おばちゃん")){ %>
 	<img id="e_img" src = "img/obatyan.gif"  alt = "おばちゃん">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("39カレー")){ %>
 	<img id="e_img" src = "img/Curry.png" alt = "39">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("ぺぺ")){ %>
 	<img id="e_img" src = "img/pepe.gif" alt = "ibees">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("ドン")){ %>
 	<img id="e_img" src = "img/don.jpg" alt = "ドン">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("帝王")){ %>
 	<img id="e_img" src = "img/ramen1.gif" alt = "ラーメン">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("鹿店主")){ %>
 	<img id="e_img" src = "img/sika.gif" alt = "鹿店主">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("海鮮丼")){ %>
 	<img id="e_img" src = "img/kaisendon.png" alt = "海鮮丼">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("スープパスタ")){ %>
 	<img id="e_img" src = "img/soup_pasta.png" alt = "スープパスタ">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("豚マニ丼")){ %>
 	<img id="e_img" src = "img/butamaniadon.png" alt = "豚マニ丼">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("やきそば")){ %>
 	<img id="e_img" src = "img/yakisoba.png" alt = "やきそば">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("地獄キーマカレー")){ %>
 	<img id="e_img" src = "img/jigoku.png" alt = "地獄キーマカレー">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("生姜焼き定食")){ %>
 	<img id="e_img" src = "img/ginger.gif" alt = "生姜焼き定食">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("鯛の大将")){ %>
 	<img id="e_img" src = "img/noboru.gif" alt = "鯛の大将">
+	<audio src="bgm/battle.mp3" autoplay>
+		</audio>
 
 
 
@@ -137,7 +158,7 @@
     MP：<%= sessionhero.getHp()%>
    </div> --%>
 </div>
-
+</div>
 <!------------------------ コマンドとテキスト表示 ----------------------------->
 
 <div class = "outline">

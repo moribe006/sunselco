@@ -30,7 +30,7 @@ public class WeaponBean implements Serializable{
 	public String isPersonal() {
 		String syoji;
 		if(personal) {
-			syoji="保持(装備できます)";
+			syoji="装備可能";
 		}else {
 			syoji="未保持";
 		}

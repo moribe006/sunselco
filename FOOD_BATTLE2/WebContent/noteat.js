@@ -11,9 +11,12 @@ function noteat(){
 	var attackBt = document.getElementById("attackBt");
 	var itemBt = document.getElementById("itemBt");
 	var runBt = document.getElementById("runBt");
-	
+	var music1 = new Audio("bgm/miss.mp3");
+	var music2 = new Audio("bgm/punch-stop1.mp3");
+
 	var randomH = Math.floor((Math.random()*5)+8)/10;
 	var randomE = Math.floor((Math.random()*5)+8)/10;
+
 
 //	操作中ボタンを無効に
 	noteatBt.disabled = true;
@@ -22,6 +25,7 @@ function noteat(){
 	runBt.disabled = true;
 
 		document.getElementById('comment').innerHTML = hName + 'の食事';
+		music1.play();
 		setTimeout(() => {
 			document.getElementById('comment').innerHTML = eName + 'には効果がないようだ';
 //			HP計算および書き換え
@@ -34,6 +38,7 @@ function noteat(){
 	//			return}
 			setTimeout(() => {
 				document.getElementById('comment').innerHTML = eName + 'の攻撃';
+				music2.play();
 				setTimeout(() => {
 					document.getElementById("y_img").style.visibility = "hidden";
 						setTimeout(() => {
@@ -61,7 +66,7 @@ function noteat(){
 					if(hHpAfter <= 0){
 						document.getElementById('hHpid').innerHTML = 0;
 						document.getElementById("y_img").style.visibility = "hidden";
-						document.getElementById('comment').innerHTML = hName + 'は力尽きた' + 
+						document.getElementById('comment').innerHTML = hName + 'は力尽きた' +
 						'<form action="/FOOD_BATTLE/GameOver" method="get"><button type="submit">タイトルへ</button></form>';
 						return}
 					setTimeout(() => {
