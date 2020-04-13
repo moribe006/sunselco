@@ -2,11 +2,13 @@
 
 
 @media screen and (min-width: 768px) {
-
+font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
 	html{
         width:auto;
         height: auto;
-
     }
 
 body{
@@ -29,6 +31,7 @@ a{
 	font-size:36px;
 	color:white;
 	text-decoration:none;
+	font-family:dqfont;
 }
 
 img{
@@ -41,17 +44,20 @@ img{
 /* -------------------------------------------スマホ */
 
 @media screen and (max-width: 768px) {
-
+font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
 	html{
         width:auto;
         height: 100%;
-
+		font-family:dqfont;
     }
 
 body{
 	background-color:black;
     color:white;
-
+    font-family:dqfont;
 }
 
 .gameover{
@@ -71,6 +77,7 @@ a{
 	font-size:6vw;
 	color:white;
 	text-decoration:none;
+	font-family:dqfont;
 }
 
 img{

@@ -88,9 +88,9 @@ function attack(){
 							}, 100);
 						}, 200);
 					setTimeout(() => {
-						document.getElementById('comment').innerHTML = hName + 'に' + (eAttack * randomE) + 'のダメージ';
+						document.getElementById('comment').innerHTML = hName + 'に' + Math.floor(eAttack * randomE) + 'のダメージ';
 //						HP計算および書き換え
-						var hHpAfter = (Number(hHp) - Number(eAttack * randomE));
+						var hHpAfter = (Number(hHp) - Math.floor(eAttack * randomE));
 						document.getElementById('hHpid').innerHTML = hHpAfter;
 //						heroのHPが0の場合、gameoverへ
 						if(hHpAfter <= 0){

@@ -15,7 +15,7 @@ function notattack(){
 		var runBt = document.getElementById("runBt");
 		var music1 = new Audio("bgm/miss.mp3");
 		var music2 = new Audio("bgm/punch-stop1.mp3");
-		
+
 		var randomH = Math.floor((Math.random()*5)+8)/10;
 		var randomE = Math.floor((Math.random()*5)+8)/10;
 
@@ -59,14 +59,14 @@ function notattack(){
 							}, 100);
 						}, 200);
 					setTimeout(() => {
-						document.getElementById('comment').innerHTML = hName + 'に' + (eKcal * randomE) + 'のダメージ';
+						document.getElementById('comment').innerHTML = hName + 'に' + Math.floor(eKcal * randomE) + 'のダメージ';
 //						HP計算および書き換え
-						var hHpAfter = (Number(hHp) - Number(eKcal * randomE));
+						var hHpAfter = (Number(hHp) - Math.floor(eKcal * randomE));
 						document.getElementById('hHpid').innerHTML = hHpAfter;
 //						heroのHPが0の場合、gameoverへ
 						if(hHpAfter <= 0){
 							document.getElementById('hHpid').innerHTML = 0;
-							document.getElementById('comment').innerHTML = hName + 'は力尽きた' + 
+							document.getElementById('comment').innerHTML = hName + 'は力尽きた' +
 							'<form action="/FOOD_BATTLE/GameOver" method="get"><button type="submit">タイトルへ</button></form>';
 							document.getElementById("y_img").style.visibility = "hidden";
 							return}

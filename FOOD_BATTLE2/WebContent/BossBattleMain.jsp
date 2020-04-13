@@ -128,7 +128,7 @@
 		</ul>
 	</div>
 	<div class = "text">
-	<p id="comment">ここにコマンド後の内容が表示されます。</p>
+	<p id="comment">どうする？</p>
 
 	</div>
 </div>

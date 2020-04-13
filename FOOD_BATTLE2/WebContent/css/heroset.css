@@ -46,6 +46,8 @@ body{
 	color:white;
 	font-family:dqfont;
 	float:left;
+	margin-top:10px;
+
 }
 input{
 	font-family:dqfont;
@@ -55,10 +57,21 @@ form{
 
 	float:left;
 }
+.nameset{
+	margin:10px 0px 20px 20px;
+	font-family:dqfont;
+	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+}
 
 }
 
-/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ スマホ*/
 
 @media screen and (max-width: 768px) {
 	html{
@@ -101,7 +114,7 @@ body{
 }
 
 #name{
-
+	margin-top:10px;
 	background-color:black;
 	border: 3px solid white;
 	color:white;
@@ -116,6 +129,17 @@ input{
 form{
 
 	float:left;
+}
+.nameset{
+	margin:10px 0px 20px 20px;
+	font-family:dqfont;
+	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
 }
 
 }

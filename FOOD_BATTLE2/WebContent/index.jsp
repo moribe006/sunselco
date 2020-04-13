@@ -18,21 +18,12 @@
 	</script>
 
 
-<!--idへ音を設定(src)  -->
-    <audio id="button_sound" preload="auto" src="bgm/pi.wav" type="audio/wav">
-    </audio>
-
-<audio src="bgm/syoten_kessen.mp3" autoplay preload="auto">
-</audio>
-
 
 	<div class = "title">
 		<img src= "img/ff.png"  alt ="">
 
 		<a href = "hero_set.jsp"  ><span class="blinking">▶</span>たべる</a>
-<!-- 		<form action = "hero_set.jsp" >
-		<input type = "submit" value= "▶たべる" > -->
-		<!-- </form> -->
+
 	</div>
 </body>
 </html>

@@ -1,22 +1,175 @@
 @charset "UTF-8";
-
+@media screen and (min-width : 768px){
 @font-face{
 font-family:dqfont;
 src:url('PixelMplus10-Regular.woff')format('woff');
 }
 html{
-	font-family:dqfont;
+    width:auto;
+    height: auto;
 }
+
+
 body{
-	background-color: black;
-	color: white;
+	font-family:dqfont;
+	background-color:black;
+	color:white;
 }
+
+.status{
+	color:white;
+	width:1060px;
+	height:125px;
+ 	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	margin:0px auto 5px auto;
+
+}
+
+.statusalea{
+	color:white;
+	width:200px;
+	height:100px;
+  	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	float: left;
+	margin-left: 2%;
+}
+
+.statusalea ul{
+	list-style: none outside;
+	padding: 0;
+	margin: 2% 0 0 1%;
+}
+
+img{
+	width=888px;
+	float: left;
+	width:120px;
+	height:120px;
+	margin-left: 2%;
+}
+
+table{
+	white-space: nowrap;
+}
+
+/* -----------------------------------ここまでステータスエリア------------------------------------------- */
+
+.bossmap{
+	color:white;
+	width:300px;
+	height:50px;
+ 	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	margin:15px auto 10px auto;
+	text-align: center;
+	padding-top: 20px;
+}
+.bossmap form{
+	margin: 0 auto;
+}
+
+.map{
+	color:white;
+	width:1200px;
+	height:250px;
+	margin:0px auto;
+	display: flex;				/* divの中身を中央寄せ */
+  	justify-content: center;	/* divの中身を中央寄せ */
+ 	align-items: center;		/* divの中身を中央寄せ */
+}
+
+/* -----------------------------------ここから左のマップ------------------------------------------- */
+.leftmap{
+	color:white;
+	width:520px;
+	height:230px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	float:left;
+	margin:0px 15px 0px auto;
+	/* margin:0px auto; */
+}
+.teikoku{
+	margin:30px 0px 0px 0px;
+	text-align: center;
+}
+.cafe{
+	float:left;
+	margin:20px 0px 0px 30px;
+}
+.don{
+	text-align: right;
+	margin:20px 30px 0px 0px;
+}
+.sika{
+	float:left;
+	margin:20px 0px 0px 30px;
+}
+.tyou{
+	text-align: right;
+	margin:20px 30px 0px 0px;
+}
+.ton{
+	text-align: center;
+	margin:20px 0px 0px 0px;
+}
+
+
+/* -----------------------------------ここから右のマップ------------------------------------------- */
+
+
+.rightmap{
+
+	color:white;
+	width:520px;
+	height:230px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	margin:0px auto 0px 15px;
+	float: left;
+}
+.namasute{
+	margin:30px 0px 0px 0px;
+	text-align: center;
+}
+.buta{
+	float:left;
+	margin:20px 0px 0px 30px;
+}
+.tyari{
+	text-align: right;
+	margin:20px 30px 0px 0px;
+}
+.ibees{
+	float:left;
+	margin:20px 0px 0px 30px;
+}
+.ryu{
+	text-align: right;
+	margin:20px 30px 0px 0px;
+}
+.carry{
+	text-align: center;
+	margin:20px 0px 0px 0px;
+}
+
+
+/* -----------------------------------ここからマップ内のボタンの色、サイズを設定------------------------------------------- */
+
 
 .border1{
 	border:1;
 	margin-left:auto;
 	margin-right:auto;
-	text-alihn:left;
 	width:100%;
 	height:200px;
 	border-style:solid;
@@ -29,7 +182,6 @@ body{
 	border:1;
 	margin-left:auto;
 	margin-right:auto;
-	text-alihn:left;
 	width:45%;
 	height:200px;
 	border-style:solid;
@@ -84,6 +236,49 @@ body{
   transition    : .3s;         /* なめらか変化 */
   cursor:default;
 }
+.wait{
+  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 1% 1%;   /* 余白       */
+  background    : rgba(0, 170, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+.end{
+	  font-family:dqfont;
+  width		 	: 120px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(170, 0, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+  margin-top: 1%;
+}
+.border4{
+	border:1;
+	width:120px;
+	height:100px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	}
+
 .buttonwait {
   font-family:dqfont;
   width		 	: 120px;
@@ -119,23 +314,358 @@ body{
 }
 
 
+/* -----------------------------------ここまでマップエリア------------------------------------------- */
 
 
-.border3{
+.textalea{
+	color:white;
+	width:1060px;
+	height:160px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	margin:20px auto 0px auto;
+}
+
+
+.lowbutton{
+	width: 150px;
+	font-family:dqfont;
+	margin:0px 3px;
+	display       : inline-block;
+	border-radius : 9%;
+	font-size     : 10pt;
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 10px 15px;   /* 余白       */
+	background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 0.3em;         /* 1行の高さ  */
+	opacity       : 0.9;         /* 透明度     */
+	transition    : .3s;         /* なめらか変化 */
+	float: left;
+}
+}
+
+
+/*-------------------------------------------------------------スマホ*/
+
+@charset "UTF-8";
+@media screen and (max-width : 768px){
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+html{
+    width:auto;
+    height: 100%;
+}
+
+
+body{
+	font-family:dqfont;
+	background-color:black;
+	color:white;
+	height: 90%;
+	top: 50%;
+	left: 50%;
+  	-ms-transform: translate(-0%,5%);
+  	-webkit-transform: translate(-0%,5%);
+  	transform: translate(-0%,5%);
+}
+
+.status{
+	color:white;
+	width:95%;
+	height:6em;
+ 	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	margin:0 auto 0px auto;
+	padding-bottom: 1px;
+
+}
+
+
+
+.statusalea{
+	color:white;
+	width:72%;
+	height:80%;
+  	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 5px ;
+	float: left;
+	padding: 3px;
+	font-size: 3vw;
+	margin-top: 1%;
+	margin-left: 1%;
+}
+.statusalea ul{
+	list-style: none outside;
+	padding: 0;
+	margin: 5% 0 2% 2%;
+}
+.statusalea ull{
+	list-style: none outside;
+
+}
+.statusalea li{
+	margin: 2% 5% 0 0;
+	-webkit-box-align: center; /* safari, Chrome対応 */
+	-moz-box-align: center;    /* Firefox対応 */
+	-o-box-align: center;      /* Opera対応 */
+	-ms-box-align: center;     /* IE対応 */
+	box-align: center;
+}
+.hp{
+	float: left;
+}
+.weapon{
+	float: left;
+}
+
+
+
+img{
+	float: left;
+	width:18%;
+	height:5em;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+/* -----------------------------------ここまでステータスエリア------------------------------------------- */
+
+.bossmap{
+	color:white;
+	width:70%;
+	height:auto;
+ 	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	margin:5px auto 5px auto;
+	text-align: center;
+	vertical-align: middle;
+	padding: 5% 5%;
+}
+
+.bossmap form{
+	margin: 0 auto;
+}
+
+
+.map{
+	color:white;
+	width:100%;
+	height:auto;
+	display: inline-block;
+	margin-top: 1%;
+
+	/*display: flex;				/* divの中身を中央寄せ */
+  	/*justify-content: center;	/* divの中身を中央寄せ */
+ 	/*align-items: center;		/* divの中身を中央寄せ */
+}
+
+/* -----------------------------------ここから左のマップ------------------------------------------- */
+.leftmap{
+
+	color:white;
+	width:48%;
+	height:100%;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	float:left;
+	/* margin:0px auto; */
+}
+.teikoku{
+	margin:5% 20% 0px 20%;
+
+
+}
+.cafe{
+	float:left;
+	margin:5% 0 0 5%;
+	width: 40%;
+}
+.don{
+	margin: 5% 4% 0 5%;
+	float: right;
+	width: 40%;
+}
+.sika{
+	float:left;
+	margin:5% 0 0 5%;
+	width: 40%;
+}
+.tyou{
+	margin:5% 4% 0 5%;
+	float: right;
+	width: 40%;
+}
+.ton{
+	margin:48% 20% 5% 20%;
+}
+
+
+/* -----------------------------------ここから右のマップ------------------------------------------- */
+
+
+.rightmap{
+
+	color:white;
+	width:48%;
+	height:100%;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	float: right;
+
+}
+.namasute{
+	margin:5% 20% 0px 20%;
+}
+.buta{
+	float:left;
+	margin:5% 0 0 5%;
+	width: 40%;
+}
+.tyari{
+	float :right;
+	margin:5% 4% 0 5%;
+	width: 40%;
+}
+.ibees{
+	float:left;
+	margin:5% 0 0 5%;
+	width: 40%;
+}
+.ryu{
+	float :right;
+	margin:5% 4% 0 5%;
+	width: 40%;
+}
+.carry{
+	margin:48% 20% 5% 20%;
+}
+
+
+/* -----------------------------------ここからマップ内のボタンの色、サイズを設定------------------------------------------- */
+
+
+.border1{
 	border:1;
 	margin-left:auto;
 	margin-right:auto;
-	text-alihn:left;
 	width:100%;
-	height:100px;
+	height:200px;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+
+	}
+.border2{
+	border:1;
+	margin-left:auto;
+	margin-right:auto;
+	width:45%;
+	height:200px;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
 	color:white;
 	}
+.button1 {
+  font-family:dqfont;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+
+.button2 {
+  font-family:dqfont;
+  width		 	: 100%;
+  height		: 3em;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 2.5vw;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 1px 1px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+
+}
+.button3 {
+  font-family:dqfont;
+  width		 	: 30%;
+  display       : inline-block;
+  height		: 2em;
+  margin-left	: 2.3%;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+.wait{
+  font-family:dqfont;
+  width		 	: 30%;
+  height		: 2em;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 1% 1%;   /* 余白       */
+  background    : rgba(0, 170, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+.end{
+	  font-family:dqfont;
+  width		 	: 30%;
+  height		: 2em;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 10pt;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(170, 0, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+  margin-top: 3%;
+}
 .border4{
 	border:1;
-	text-alihn:left;
 	width:120px;
 	height:100px;
 	border-style:solid;
@@ -143,10 +673,78 @@ body{
 	border-radius:10px;
 	color:white;
 	}
-.img{
-	text-alihn:left;
-	float:left;;
-	width:120px;
-	height:100px;
-	}
+
+.buttonwait {
+  font-family:dqfont;
+  width		 	: 100%;
+  height		: 3em;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 2.5vw;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 1% 1%;   /* 余白       */
+  background    : rgba(0, 170, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+
 }
+
+.buttonend {
+  font-family:dqfont;
+  width		 	: 100%;
+  height		: 3em;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 2.5vw;
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 10px 15px;   /* 余白       */
+  background    : rgba(170, 0, 0, 0.70);     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 0.3em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  cursor:default;
+}
+
+
+/* -----------------------------------ここまでマップエリア------------------------------------------- */
+
+
+.textalea{
+	color:white;
+	width:85%;
+	height:38%;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	padding: 10px ;
+	margin: 2% auto 0px auto;
+
+}
+
+
+.lowbutton{
+	width		  : 30%;
+	height        : 3em;
+	font-family:dqfont;
+	margin: 5% 1% 0 2%;
+	display       : inline-block;
+	border-radius : 9%;
+	font-size     : 10pt;
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 1px 1px;   /* 余白       */
+	background    : rgba(0, 0, 0, 0.10);     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 0.3em;         /* 1行の高さ  */
+	opacity       : 0.9;         /* 透明度     */
+	transition    : .3s;         /* なめらか変化 */
+	float: left;
+}
+}
+

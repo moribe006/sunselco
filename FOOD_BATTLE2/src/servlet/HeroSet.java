@@ -68,7 +68,7 @@ public class HeroSet extends HttpServlet {
 		HttpSession session4 = request.getSession();
 		session4.setAttribute("weaponList", weaponList);
 		//heroのインスタンス化（セッションに保存）
-		HeroStatusBean hero = new HeroStatusBean(name,100,20,20,0);
+		HeroStatusBean hero = new HeroStatusBean(name,100,40,40,0);
 		//heroにアイテムリストをセット
 		if( hero.getPersonal_belogingsList().size()==0) {
 			hero.setPersonal_belogingsList(itemList);
@@ -81,7 +81,12 @@ public class HeroSet extends HttpServlet {
 			//初期装備ではしを持たせる（装備はさせない）
 			String syoki="はし";
 			hero.setPersonal_equipmentList(syoki);
-		}
+			//初期装備ではしを装備させる
+			for(WeaponBean weapon:weaponList) {
+				if(syoki.equals(weapon.getName())) {
+			hero.setEquipment(weapon);
+
+			}}}
 
 
 		//heroのセッションを保存

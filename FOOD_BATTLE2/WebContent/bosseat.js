@@ -84,9 +84,9 @@ function eat(){
 						}, 100);
 					}, 200);
 				setTimeout(() => {
-					document.getElementById('comment').innerHTML = hName + 'に' + (eKcal * randomE) + 'のダメージ';
+					document.getElementById('comment').innerHTML = hName + 'に' + Math.floor(eKcal * randomE) + 'のダメージ';
 //					MP計算および書き換え
-					var hMpAfter = (Number(hMp) + Number(eKcal * randomE));
+					var hMpAfter = (Number(hMp) + Math.floor(eKcal * randomE));
 					document.getElementById('hMpid').innerHTML = hMpAfter;
 //					heroのMPが100の場合、gameoverへ
 					if(hMpAfter >= 100){

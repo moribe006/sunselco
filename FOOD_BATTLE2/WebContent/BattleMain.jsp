@@ -87,27 +87,27 @@
 		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("海鮮丼")){ %>
-	<img id="e_img" src = "img/kaisendon.png" alt = "海鮮丼">
+	<img id="e_img" src = "img/kaisendon.gif" alt = "海鮮丼">
 	<audio src="bgm/battle.mp3" autoplay>
 		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("スープパスタ")){ %>
-	<img id="e_img" src = "img/soup_pasta.png" alt = "スープパスタ">
+	<img id="e_img" src = "img/soup_pasta1.gif" alt = "スープパスタ">
 	<audio src="bgm/battle.mp3" autoplay>
 		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("豚マニ丼")){ %>
-	<img id="e_img" src = "img/butamaniadon.png" alt = "豚マニ丼">
+	<img id="e_img" src = "img/butadon.gif" alt = "豚マニ丼">
 	<audio src="bgm/battle.mp3" autoplay>
 		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("やきそば")){ %>
-	<img id="e_img" src = "img/yakisoba.png" alt = "やきそば">
+	<img id="e_img" src = "img/yakisoba.gif" alt = "やきそば">
 	<audio src="bgm/battle.mp3" autoplay>
 		</audio>
 
 	<%}else if(enemyDetermine.getName().equals("地獄キーマカレー")){ %>
-	<img id="e_img" src = "img/jigoku.png" alt = "地獄キーマカレー">
+	<img id="e_img" src = "img/jigoku.gif" alt = "地獄キーマカレー">
 	<audio src="bgm/battle.mp3" autoplay>
 		</audio>
 
@@ -173,7 +173,7 @@
 		</ul>
 	</div>
 		<div class = "text">
-	<p id="comment">ここにコマンド後の内容が表示されます。</p>
+	<p id="comment">どうする？</p>
 	</div>
 </div>
 

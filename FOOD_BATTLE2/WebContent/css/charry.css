@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) {
-	html{
-        width:auto;
-        height: auto;
-    }
-
 
 @font-face{
 font-family:dqfont;
@@ -13,10 +8,19 @@ src:url('PixelMplus10-Regular.woff')format('woff');
 }
 html{
 	font-family:dqfont;
+	width:auto;
+    height: 100%;
+
+
 }
 body{
 	background-color: black;
 	text: #ffff;
+	position: absolute;
+  	top: 48%;
+  	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+  	-webkit- transform: translateY(-50%) translateX(-50%);
 }
 /* --------------------------------------------- */
 h1{
@@ -32,7 +36,7 @@ h1{
 
 	width:auto;
 	text-align: center;
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
 
 
@@ -50,19 +54,30 @@ img{
 	margin-right:auto;
 	text-alihn:left;
 	width:800px;
-	height:200px;
+	height:12em;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
 	color:white;
 	padding: 10px;
+	line-height: 130%;
+
 
 }
+
 
 button{
 	font-family:dqfont;
 	float:right;
-
+	margin-right: 5%;
+	text-align    : center;
+  	cursor        : pointer;
+  	padding       : 10px 15px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
 
 }
 }
@@ -71,9 +86,15 @@ button{
 /* --------------------------------------------- スマホ*/
 @media screen and (max-width: 768px) {
 	html{
-        width:auto;
-        height: 100%;
-    }
+    width:auto;
+    height: 100%;
+    font-family:dqfont;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
 
 
 @font-face{
@@ -82,17 +103,18 @@ src:url('PixelMplus10-Regular.woff')format('woff');
 }
 html{
 	font-family:dqfont;
+
 }
 body{
 	background-color: black;
 	text: #ffff;
 	margin: 0 auto;
+
 }
 /* --------------------------------------------- */
 h1{
 	color:white;
     text-align: center;
-    margin-top: 15%;
 }
 
 /* --------------------------------------------- */
@@ -103,14 +125,15 @@ h1{
 
 	width:auto;
 	text-align: center;
-	margin-bottom:30px;
+
 }
 
 
 
 img{
 	position: center;
-	max-width: 100%;
+	width: 100%;
+	height: 15em;
 }
 
 
@@ -121,14 +144,15 @@ img{
     margin-left:auto;
 	margin-right:auto;
 	text-alihn:left;
-	width:80%;
-	height : 250px;
+	width:90%;
+	height : auto;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
 	color:white;
 	padding: 10px;
-	margin-top: 25%;
+	margin-top: 5%;
+	line-height: 110%;
 
 }
 
@@ -148,8 +172,7 @@ img{
 	transition    : .3s;
 	margin-left:60%;
 	margin-bottom: 10px;
-	right: 0;
-	bottom: 0;
+	margin-top: 10px;
 
 }
 }

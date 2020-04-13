@@ -1,11 +1,29 @@
 @charset "UTF-8";
 
+@media screen and (min-width :768px){
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+
+html{
+	max-width	: auto;
+	height		: 100%;
+	margin		: 0 auto;
+}
+
 body{
 	background-color: black;
-	color: white;
+	color			: white;
+	margin			: 0 auto;
+	width			: auto;
+	height			: auto;
+	font-family		: dqfont;
+	margin			: 5% 0 0 5%;
 }
 .button{
-  font-family:dqfont;
+  font-family	:dqfont;
   width		 	: 120px;
   display       : inline-block;
   border-radius : 9%;
@@ -19,4 +37,78 @@ body{
   opacity       : 0.9;         /* 透明度     */
   transition    : .3s;         /* なめらか変化 */
 
+}
+.back{
+	font-family	  : dqfont;
+	width		  :120px;
+	text-align 	  : center;
+	cursor        : pointer;
+ 	padding       : 10px 5px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+	line-height   : 0.3em;
+  	opacity       : 0.9;
+ 	transition    : .3s;
+ 	border-radius : 9%;
+}
+table{
+	border-spacing: 20px 10px;
+}
+}
+@media screen and (max-width :768px){
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+
+html{
+	width: auto;
+	height: 100%;
+}
+
+body{
+	background-color	: black;
+	color				: white;
+	height				: 90%;
+	font-family			: dqfont;
+	text-align			: center;
+	margin-top			: 20%;
+}
+.button{
+  font-family   : dqfont;
+  width		 	: 100%;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 3vw;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 10px 5px;
+  background    : rgba(0, 0, 0, 0.10);
+  color         : #ffffff;
+  line-height   : 0.3em;
+  opacity       : 0.9;
+  transition    : .3s;
+  margin-top    : 5%;
+}
+.back{
+	font-family	  : dqfont;
+	text-align	  : center;
+	width		  : 90px;
+	cursor        : pointer;
+ 	padding       : 10px 5px;
+ 	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+	line-height   : 0.3em;
+  	opacity       : 0.9;
+ 	transition    : .3s;
+ 	border-radius : 9%;
+}
+table{
+	margin		: auto;
+	white-space	: nowrap;
+	width: 100%;
+}
+
+}
 }

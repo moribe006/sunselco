@@ -1,7 +1,16 @@
 @charset "UTF-8";
+@media screen and (min-width: 768px) {
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+
 body{
 	background-color:black;
 	color:white;
+	font-family: dqfont;
+	margin-top: 1%;
 }
 
 .toilet{
@@ -16,7 +25,7 @@ body{
 	margin-right:auto;
 	text-alihn:left;
 	width:800px;
-	height:200px;
+	height:180px;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
@@ -27,6 +36,15 @@ body{
 .explain p{
 	margin:10px;
 	padding:20px;
+}
+.button input{
+	font-family:dqfont;
+	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	 	padding       : 10px 15px;
 }
 .button{
   display       : inline-block;
@@ -39,4 +57,87 @@ body{
   color         : #ffffff;
   line-height   : 2em;
   opacity       : 0.9;
+}
+}
+
+/*-------------------------------------------------スマホ*/
+@media screen and (max-width: 768px) {
+
+
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
+
+html{
+	width: auto;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+body{
+	background-color:black;
+	color:white;
+	width: auto;
+	height: auto;
+	font-family: dqfont;
+
+}
+
+.toilet img{
+	text-align:center;
+	display :block;
+	max-width:90%;
+	height:390px;
+	margin: 0 auto;
+	margin-top: 2%;
+}
+
+.explain{
+	margin-left:auto;
+	margin-right:auto;
+	text-alihn:left;
+	width:95%;
+	height:30%;
+	border-style:solid;
+	border-color:white;
+	border-radius:10px;
+	color:white;
+	margin-top: 5%;
+	display: block;
+
+
+}
+
+.explain p{
+	margin:2%;
+	font-size: 6vw;
+}
+
+.button input{
+	font-family:dqfont;
+	background    : rgba(0, 0, 0, 0.10);
+	color         : #ffffff;
+ 	line-height   : 0.3em;
+ 	opacity       : 0.9;
+	transition    : .3s;
+	 	padding       : 10px 15px;
+}
+.button{
+  font-family:dqfont;
+  border-radius : 19%;
+  font-size     : 6vw;
+  text-align    : center;
+  cursor        : pointer;
+  background    : #000000;
+  color         : #ffffff;
+  line-height   : 1em;
+  opacity: 0.9;
+  margin: 10% 0 0 60%;
+}
+
 }

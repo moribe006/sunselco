@@ -14,30 +14,38 @@ body{
 	font-family:dqfont;
 	background-color:black;
 	color:white;
+	position: absolute;
+  	top: 48%;
+  	left: 49%;
+	transform: translateY(-50%) translateX(-50%);
+  	-webkit- transform: translateY(-50%) translateX(-50%);
 }
-
+.all{
+	width: auto;
+	margin: 0px auto;
+}
 
 /* ------------------------------------------------ */
 
 .picture{
-	text-align: right;
-    width: 1300px;
-    height: 250px;
-	margin-bottom:30px;
-	margin-left: auto;
-	margin-right: 100px;
-
+    width: 520px;
+    height: 300px;
+	margin: 0 0 0 auto;
 
 }
 
 #e_img{
-    width: 200px;
+    width: 214px;
     height: 150px;
+    margin-left: 1%;
+    margin-top: 30px;
 }
 
 #y_img{
     width: 200px;
     height: 150px;
+    margin-top: 15px;
+    margin-left: 5px;
 }
 
 
@@ -52,10 +60,8 @@ body{
 	border-color:white;
 	border-radius:10px;
 	padding: 10px ;
-	margin-left: 750px;
-	margin-right: auto;
 	float: left;
-
+	margin-top: 30px;
 }
 .enamesel{
 	width: 70px;
@@ -77,6 +83,7 @@ body{
 	border-radius:10px;
 	padding: 10px ;
 	float: left;
+	margin-top: 15px
 }
 
 .hnamesel{
@@ -95,12 +102,14 @@ body{
 }
 /* ------------------------------------------------ */
 .y{
+	width: auto;
+	margin-left: 20px;
 }
 
 /* ------------------------------------------------ */
 
 .outline{
-	margin:40px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
 	width: auto;
     height: 250px;
       display: -webkit-flex;
@@ -224,7 +233,7 @@ button {
 
 
 
-/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------スマホ*/
 @media screen and (max-width :768px){
 
 
@@ -235,6 +244,10 @@ src:url('PixelMplus10-Regular.woff')format('woff');
 	html{
         width:auto;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
 
 	body{
@@ -242,6 +255,8 @@ src:url('PixelMplus10-Regular.woff')format('woff');
 	background-color:black;
 	color:white;
 	height: 700px;
+	margin: auto;
+	width: 100%;
 }
 
 
@@ -249,23 +264,30 @@ src:url('PixelMplus10-Regular.woff')format('woff');
 
 .picture{
 	text-align: right;
-    width: 360px;
-    height: 100px;
-	margin-bottom:120px;
-	margin-top: 20px;
+    width: 100%;
+    height: 8em;
+	margin-bottom:0%;
+	margin-top: 15px;
 
 }
 
-img{
-    width: 130px;
+
+#e_img{
+    width: 7em;
     height: 120px;
+    margin-right: 4%;
 }
 
+#y_img{
+    width: 7em;
+    height: 8em;
+    margin-left: 5%;
+}
 /* ------------------------------------------------ */
 .e{
 	color:white;
     text-align:left;
-	width:200px;
+	width:220px;
 	height:50px;
 	border-style:solid;
 	border-color:white;
@@ -274,15 +296,17 @@ img{
 	padding: 10px ;
     margin-left: 5px;
     margin-bottom: 5px;
-    margin-top: 5px;
+    margin-top: 5%;
+    white-space: nowrap;
+    margin-left: 6%;
 
 }
 .enamesel{
-	width: 70px;
+	width: 50px;
 }
 
 .ehpsel{
-	width: 70px;
+	width: 50px;
 }
 
 /* ------------------------------------------------ */
@@ -290,15 +314,16 @@ img{
 .h{
 	color:white;
     text-align:left;
-	width:210px;
+	width:220px;
 	height:50px;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
 	padding: 10px ;
 	float: right;
-	margin-right: 5px;
+	margin-right: 5%;
 	margin-top: 40px;
+	white-space: nowrap;
 }
 
 .hnamesel{
@@ -317,13 +342,14 @@ img{
 }
 /* ------------------------------------------------ */
 .y{
+	width: 100%;
 }
 
 /* ------------------------------------------------ */
 
 .outline{
 	margin:auto;
-	width: 360px;
+	width: 100%;
     height: 350px;
 
 }
@@ -332,7 +358,7 @@ img{
 .comand{
 	width:350px;
 	height: 90px;
-	margin: 5px 5px 5px 5px;
+	margin: 0 auto;
 	border: 3px solid white ;
 	border-radius:10px;
 	text-align: center;
@@ -373,7 +399,8 @@ img{
 	border: 3px solid white ;
 	border-radius:10px;
 	color:white;
-	margin: 10px 5px 10px 5px;
+	margin: 0 auto;
+	margin-top: 3%;
 
 }
 /* ------------------------------------------------ */

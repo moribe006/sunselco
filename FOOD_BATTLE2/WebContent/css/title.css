@@ -1,9 +1,14 @@
 @charset "UTF-8";
-
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+}
 @media screen and (min-width: 768px) {
 	html{
         width:auto;
-        height: auto;
+        height: 800px;
+        font-family:dqfont;
+
     }
 
 
@@ -13,8 +18,8 @@ body{
 	color:white;
 }
 img{
-	width: 1200px;
-	height: 700px;
+	width: 95%;
+	height: 43.5em;
 
 
 }
@@ -22,14 +27,35 @@ img{
 .title{
 	position: relative;
 	text-align: center;
-
-
 }
+.blinking{
+  animation: flash 1s linear infinite;
+  width:50px;
+  height:50px;
+  /* background:#0091EA; */
+  margin:20px;
+}
+@keyframes flash {
+  0%,50%,100%{
+    opacity: 0;
+  }
+
+/*   35%{
+    opacity: 1;
+    background:#7fff00;
+  } */
+
+  65%{
+    opacity: 1;
+/*     background:#0091EA; */
+  }
+}
+
 .title a {
 	position: absolute;
 	color:black;
 	font-weight: bold;
-	font-size: 6vw;
+	font-size: 5vw;
 	top: 70%;
 	left: 50%;
   	-ms-transform: translate(-50%,-50%);
@@ -38,25 +64,33 @@ img{
   	margin:0;
  	padding:0;
  	text-decoration: none;
+ 	font-family:dqfont;
+
 }
 .title a:hover{
   transition : 0.5s;
-  color:#ff0000;
+  color:#FF4F02;
   box-shadow:none;
 }
 }
-/* ---------------------------------------------------------------- */
+/* ----------------------------------------------------------------スマホ*/
 @media screen and (max-width: 768px) {
-	html{
-        width: auto%;
-        height: 100%;
-    }
+html{
+    width: auto%;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family:dqfont;
+}
 
 
 
 body{
 	background-color: black;
 	color:white;
+
 }
 
 .title {
@@ -67,11 +101,11 @@ body{
 
 .title img{
 	max-width: 100%;
-	height: 750px;
+	height: 650px;
 }
 .title a {
 	position: absolute;
-	color:black;
+	color:#000000;
 	font-weight: bold;
 	font-size: 10vw;
 	top: 70%;
@@ -85,7 +119,7 @@ body{
 }
 .title a:hover{
   transition : 0.5s;
-  color:#ff0000;
+  color:#808080;
   box-shadow:none;
 }
 }

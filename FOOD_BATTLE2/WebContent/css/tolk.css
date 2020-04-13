@@ -19,6 +19,7 @@ html{
 body{
 	background-color:black;
 	color:white;
+	margin-top: 1%;
 
 }
 
@@ -31,14 +32,18 @@ body{
 	margin:0 auto;
 	 position: relative;
 }
+.tolk img{
+	width: 80%;
+	height: 30em;
+}
 
 .king{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10%;
-    left: 47%;
+    top: 5%;
+    left: 46%;
 }
 
 .hero{
@@ -47,7 +52,7 @@ body{
     align-items: center;
     position: absolute;
     top: 40%;
-    left: 47%;
+    left: 45%;
 
 }
 
@@ -56,8 +61,8 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
-    left: 33.5%;
+    top: 4%;
+    left: 30%;
 
 }
 
@@ -66,11 +71,94 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
-    left: 60%;
+    top: 4%;
+    left: 61%;
+
+}
+.night3{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 30%;
 
 }
 
+.night4{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 61%;
+
+}.night5{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 36%;
+    left: 30%;
+
+}
+
+.night6{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 36%;
+    left: 61%;
+
+}
+.tolk img{
+	width: 90%;
+}
+.king img{
+
+	width: 140px;
+}
+
+.hero img{
+
+    width: 140px;
+    height: 110px;
+
+}
+
+.night1 img{
+
+    width: 140px;
+
+}
+
+.night2 img{
+
+	width: 140px;
+}
+.night3 img{
+
+    width: 140px;
+
+}
+
+.night4 img{
+
+    width: 140px;
+
+}
+.night5 img{
+
+    width: 140px;
+
+}
+
+.night6 img{
+
+    width: 140px;
+
+}
 
 
 /* ----------------------------------------------- */
@@ -83,11 +171,12 @@ body{
 	padding-left: 20px;
     position: relative;
 	width:1060px;
-	height:200px;
+	height:160px;
 	border-style:solid;
 	border-color:white;
 	border-radius:10px;
 	color:white;
+	margin-top: 5px;
 
 }
 
@@ -112,7 +201,7 @@ input{
 	transition    : .3s;
 	position: absolute;
 	right: 8%;
-	top: 80%;
+	top: 70%;
 
 }
 /* ----------------------------------------------- */
@@ -122,10 +211,14 @@ input{
 
 
 @media screen and (max-width: 768px) {
-	html{
-        width:auto;
-        height: 100%;
-    }
+html{
+    width:auto;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 @font-face{
 font-family:dqfont;
@@ -139,17 +232,21 @@ html{
 body{
 	background-color:black;
 	color:white;
+	height:80%;
 
 }
 
 /* ----------------------------------------------- */
 
+
 .tolk img{
+	display:flex;
 	align-items: center;
-	display:block;
 	max-width: 100%;
-	max-height: 50%;
+	max-height: 30em;
     position: relative;
+    margin : 0 auto;
+
 }
 
 .king img{
@@ -159,6 +256,7 @@ body{
     position: absolute;
     top: 10%;
     left: 40%;
+    width: 90px;
 }
 
 .hero img{
@@ -166,8 +264,10 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 44%;
+    left: 38%;
+    width: 90px;
+    height: 80px;
 
 }
 
@@ -176,8 +276,9 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 12%;
+    left: 2%;
+    width: 90px;
 
 }
 
@@ -186,10 +287,55 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
-    left: 60%;
+    top: 12%;
+    left: 74%;
+    width: 90px;
 
 }
+.night3 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 26%;
+    left: 2%;
+    width: 90px;
+
+}
+
+.night4 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 26%;
+    left: 74%;
+    width: 90px;
+
+}
+.night5 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: 90px;
+
+}
+
+.night6 img{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 74%;
+    width: 90px;
+
+}
+
+
 
 
 

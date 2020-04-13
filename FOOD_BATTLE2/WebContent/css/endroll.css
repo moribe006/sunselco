@@ -1,26 +1,40 @@
 
 @charset "UTF-8";
-
+@font-face{
+font-family:dqfont;
+src:url('PixelMplus10-Regular.woff')format('woff');
+font-display:swap;
+}
 
 
 @media screen and (min-width: 768px) {
 
 	html{
+		font-family:dqfont , sans-serif;
         width:auto;
         height: 700px;
-
     }
 
 
 body{
-
 	background-color: black;
 	color: white;
 	text-align: center;
 	margin: 0;
 
 }
-
+.left{
+	width:120px;
+	height:120px;
+	margin-right:auto;
+	margin-left: 20%;
+}
+.right{
+	width:120px;
+	height:120px;
+	margin-left: auto;
+	margin-right:20%;
+}
 
 #movie{
 	width : 100%;
@@ -42,7 +56,7 @@ body{
     margin:  auto;              /* 位置調整と組み合わせて上下中央に  */
 
 
-	animation: anim-scroll-up 100s linear forwards;
+	animation: anim-scroll-up 120s linear forwards;
 }
 
 @keyframes anim-scroll-up{
@@ -54,6 +68,20 @@ to{
 	bottom:100%;
 }
 }
+
+
+a{
+	color: blue;
+}
+
+a:hover{
+  transition : 0.5s;
+  color:#FF4F02;
+  box-shadow:none;
+}
+
+
+
 }
 
 /* --------------------------------------------------スマホ */
@@ -61,12 +89,13 @@ to{
 
 
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 768px) {
 
 
      html{
         width:auto;
         height: 100%;
+        font-family:dqfont , sans-serif;
 
           }
 
@@ -80,11 +109,22 @@ body{
 	margin: 0;
 
 }
-
+.left{
+	width:120px;
+	height:120px;
+	margin-right:auto;
+	margin-left: 0%;
+}
+.right{
+	width:120px;
+	height:120px;
+	margin-left: auto;
+	margin-right:0%;
+}
 
 #movie{
 	width : auto;
-	height : 800px;
+	height : 50em;
 	background-color:black;
 	overflow:hidden;
 	position:relative;
@@ -105,7 +145,7 @@ body{
 	animation: anim-scroll-up 100s linear forwards;
 }
 
-@keyframes anim-scroll-up{
+ @keyframes anim-scroll-up{
 	from{
 		top:auto;
 	    }
